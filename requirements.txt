@@ -7,3 +7,4 @@ google-search-results
 trafilatura
 youtube-transcript-api
 networkx
+streamlit

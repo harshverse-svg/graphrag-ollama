@@ -6,6 +6,8 @@ It keeps the original notebooks and sample outputs for reference, while adding r
 
 ## What is included
 
+- `app.py`: local web app for exploring the graph, asking Ollama questions, rebuilding the graph, and scraping new data
+- `start_app.bat`: one-click Windows launcher
 - `src/graphrag_ollama/`: Ollama-ready Python modules for scraping, graph building, querying, and visualization
 - `scripts/run_scrape.py`: collects articles and video transcripts into a CSV dataset
 - `scripts/run_pipeline.py`: extracts entities and relationships, builds the graph, writes JSON/HTML, and can answer a question
@@ -22,12 +24,28 @@ It keeps the original notebooks and sample outputs for reference, while adding r
 
 Community detection in this version uses NetworkX Louvain clustering so it works cleanly on current Windows Python environments.
 
-## Install
+## Fastest way to run
+
+On Windows, just double-click:
+
+```bash
+start_app.bat
+```
+
+This will:
+
+- create `.venv` if needed
+- copy `.env.example` to `.env` if needed
+- install dependencies
+- launch the Streamlit app
+
+## Manual install
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
+python -m streamlit run app.py
 ```
 
 ## Configure
@@ -45,7 +63,11 @@ OLLAMA_CONTEXT_WINDOW=8192
 
 Note: standard local Ollama usually does not use an API key. If your Ollama server is local, `OLLAMA_BASE_URL` and model names are the important settings.
 
-## Run the scraper
+## Optional CLI commands
+
+The app already exposes these features, but the scripts are still available:
+
+### Run the scraper
 
 ```bash
 python scripts/run_scrape.py ^
@@ -54,7 +76,7 @@ python scripts/run_scrape.py ^
   --output data/ai_copyright_dataset.csv
 ```
 
-## Build the GraphRAG project
+### Build the GraphRAG project
 
 ```bash
 python scripts/run_pipeline.py ^
