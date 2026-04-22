@@ -1,0 +1,9 @@
+llama-index-core
+llama-index-llms-ollama
+pandas
+nest-asyncio
+python-dotenv
+google-search-results
+trafilatura
+youtube-transcript-api
+networkx
