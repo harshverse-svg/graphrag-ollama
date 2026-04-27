@@ -1,0 +1,1776 @@
+query,title,snippet,source,date,url,type,full_text,video_id,status
+python libraries,The Python Standard Library,This library reference manual describes the standard library that is distributed with Python. It also describes some of the optional components.,Python documentation,,https://docs.python.org/3/library/index.html,article,"The Python Standard Library¶
+While The Python Language Reference describes the exact syntax and semantics of the Python language, this library reference manual describes the standard library that is distributed with Python. It also describes some of the optional components that are commonly included in Python distributions.
+Python’s standard library is very extensive, offering a wide range of facilities as indicated by the long table of contents listed below. The library contains built-in modules (written in C) that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming. Some of these modules are explicitly designed to encourage and enhance the portability of Python programs by abstracting away platform-specifics into platform-neutral APIs.
+The Python installers for the Windows platform usually include the entire standard library and often also include many additional components. For Unix-like operating systems Python is normally provided as a collection of packages, so it may be necessary to use the packaging tools provided with the operating system to obtain some or all of the optional components.
+In addition to the standard library, there is an active collection of hundreds of thousands of components (from individual programs and modules to packages and entire application development frameworks), available from the Python Package Index.
+- Introduction
+- Built-in Functions
+- Built-in Constants
+- Built-in Types
+- Truth Value Testing
+- Boolean Operations —
+and
+,or
+,not
+- Comparisons
+- Numeric Types —
+int
+,float
+,complex
+- Boolean Type -
+bool
+- Iterator Types
+- Sequence Types —
+list
+,tuple
+,range
+- Text and Binary Sequence Type Methods Summary
+- Text Sequence Type —
+str
+- Binary Sequence Types —
+bytes
+,bytearray
+,memoryview
+- Set Types —
+set
+,frozenset
+- Mapping Types —
+dict
+- Context Manager Types
+- Type Annotation Types — Generic Alias, Union
+- Other Built-in Types
+- Special Attributes
+- Integer string conversion length limitation
+- Built-in Exceptions
+- Thread Safety Guarantees
+- Text Processing Services
+string
+— Common string operationsstring.templatelib
+— Support for template string literalsre
+— Regular expression operationsdifflib
+— Helpers for computing deltastextwrap
+— Text wrapping and fillingunicodedata
+— Unicode Databasestringprep
+— Internet String Preparationreadline
+— GNU readline interfacerlcompleter
+— Completion function for GNU readline
+- Binary Data Services
+- Data Types
+datetime
+— Basic date and time typeszoneinfo
+— IANA time zone supportcalendar
+— General calendar-related functionscollections
+— Container datatypescollections.abc
+— Abstract Base Classes for Containersheapq
+— Heap queue algorithmbisect
+— Array bisection algorithmarray
+— Efficient arrays of numeric valuesweakref
+— Weak referencestypes
+— Dynamic type creation and names for built-in typescopy
+— Shallow and deep copy operationspprint
+— Data pretty printerreprlib
+— Alternaterepr()
+implementationenum
+— Support for enumerationsgraphlib
+— Functionality to operate with graph-like structures
+- Numeric and Mathematical Modules
+- Functional Programming Modules
+- File and Directory Access
+pathlib
+— Object-oriented filesystem pathsos.path
+— Common pathname manipulationsstat
+— Interpretingstat()
+resultsfilecmp
+— File and Directory Comparisonstempfile
+— Generate temporary files and directoriesglob
+— Unix style pathname pattern expansionfnmatch
+— Unix filename pattern matchinglinecache
+— Random access to text linesshutil
+— High-level file operations
+- Data Persistence
+- Data Compression and Archiving
+- The
+compression
+package compression.zstd
+— Compression compatible with the Zstandard formatzlib
+— Compression compatible with gzipgzip
+— Support for gzip filesbz2
+— Support for bzip2 compressionlzma
+— Compression using the LZMA algorithmzipfile
+— Work with ZIP archivestarfile
+— Read and write tar archive files
+- The
+- File Formats
+- Cryptographic Services
+- Generic Operating System Services
+os
+— Miscellaneous operating system interfacesio
+— Core tools for working with streamstime
+— Time access and conversionslogging
+— Logging facility for Pythonlogging.config
+— Logging configurationlogging.handlers
+— Logging handlersplatform
+— Access to underlying platform’s identifying dataerrno
+— Standard errno system symbolsctypes
+— A foreign function library for Python
+- Command-line interface libraries
+argparse
+— Parser for command-line options, arguments and subcommandsoptparse
+— Parser for command line optionsgetpass
+— Portable password inputfileinput
+— Iterate over lines from multiple input streamscurses
+— Terminal handling for character-cell displayscurses.textpad
+— Text input widget for curses programscurses.ascii
+— Utilities for ASCII characterscurses.panel
+— A panel stack extension for cursescmd
+— Support for line-oriented command interpreters
+- Concurrent Execution
+threading
+— Thread-based parallelismmultiprocessing
+— Process-based parallelismmultiprocessing.shared_memory
+— Shared memory for direct access across processes- The
+concurrent
+package concurrent.futures
+— Launching parallel tasksconcurrent.interpreters
+— Multiple interpreters in the same processsubprocess
+— Subprocess managementsched
+— Event schedulerqueue
+— A synchronized queue classcontextvars
+— Context Variables_thread
+— Low-level threading API
+- Networking and Interprocess Communication
+- Internet Data Handling
+email
+— An email and MIME handling packagejson
+— JSON encoder and decodermailbox
+— Manipulate mailboxes in various formatsmimetypes
+— Map filenames to MIME typesbase64
+— Base16, Base32, Base64, Base85 Data Encodingsbinascii
+— Convert between binary and ASCIIquopri
+— Encode and decode MIME quoted-printable data
+- Structured Markup Processing Tools
+html
+— HyperText Markup Language supporthtml.parser
+— Simple HTML and XHTML parserhtml.entities
+— Definitions of HTML general entities- XML Processing Modules
+xml.etree.ElementTree
+— The ElementTree XML APIxml.dom
+— The Document Object Model APIxml.dom.minidom
+— Minimal DOM implementationxml.dom.pulldom
+— Support for building partial DOM treesxml.sax
+— Support for SAX2 parsersxml.sax.handler
+— Base classes for SAX handlersxml.sax.saxutils
+— SAX Utilitiesxml.sax.xmlreader
+— Interface for XML parsersxml.parsers.expat
+— Fast XML parsing using Expat
+- Internet Protocols and Support
+webbrowser
+— Convenient web-browser controllerwsgiref
+— WSGI Utilities and Reference Implementationurllib
+— URL handling modulesurllib.request
+— Extensible library for opening URLsurllib.response
+— Response classes used by urlliburllib.parse
+— Parse URLs into componentsurllib.error
+— Exception classes raised by urllib.requesturllib.robotparser
+— Parser for robots.txthttp
+— HTTP moduleshttp.client
+— HTTP protocol clientftplib
+— FTP protocol clientpoplib
+— POP3 protocol clientimaplib
+— IMAP4 protocol clientsmtplib
+— SMTP protocol clientuuid
+— UUID objects according to RFC 9562socketserver
+— A framework for network servershttp.server
+— HTTP servershttp.cookies
+— HTTP state managementhttp.cookiejar
+— Cookie handling for HTTP clientsxmlrpc
+— XMLRPC server and client modulesxmlrpc.client
+— XML-RPC client accessxmlrpc.server
+— Basic XML-RPC serversipaddress
+— IPv4/IPv6 manipulation library
+- Multimedia Services
+- Internationalization
+- Graphical user interfaces with Tk
+tkinter
+— Python interface to Tcl/Tktkinter.colorchooser
+— Color choosing dialogtkinter.font
+— Tkinter font wrapper- Tkinter Dialogs
+tkinter.messagebox
+— Tkinter message promptstkinter.scrolledtext
+— Scrolled Text Widgettkinter.dnd
+— Drag and drop supporttkinter.ttk
+— Tk themed widgets- IDLE — Python editor and shell
+turtle
+— Turtle graphics
+- Development Tools
+typing
+— Support for type hintspydoc
+— Documentation generator and online help system- Python Development Mode
+doctest
+— Test interactive Python examplesunittest
+— Unit testing frameworkunittest.mock
+— mock object libraryunittest.mock
+— getting startedtest
+— Regression tests package for Pythontest.support
+— Utilities for the Python test suitetest.support.socket_helper
+— Utilities for socket teststest.support.script_helper
+— Utilities for the Python execution teststest.support.bytecode_helper
+— Support tools for testing correct bytecode generationtest.support.threading_helper
+— Utilities for threading teststest.support.os_helper
+— Utilities for os teststest.support.import_helper
+— Utilities for import teststest.support.warnings_helper
+— Utilities for warnings tests
+- Debugging and Profiling
+- Software Packaging and Distribution
+- Python Runtime Services
+sys
+— System-specific parameters and functionssys.monitoring
+— Execution event monitoringsysconfig
+— Provide access to Python’s configuration informationbuiltins
+— Built-in objects__main__
+— Top-level code environmentwarnings
+— Warning controldataclasses
+— Data Classescontextlib
+— Utilities forwith
+-statement contextsabc
+— Abstract Base Classesatexit
+— Exit handlerstraceback
+— Print or retrieve a stack traceback__future__
+— Future statement definitionsgc
+— Garbage Collector interfaceinspect
+— Inspect live objectsannotationlib
+— Functionality for introspecting annotationssite
+— Site-specific configuration hook
+- Custom Python Interpreters
+- Importing Modules
+zipimport
+— Import modules from Zip archivespkgutil
+— Package extension utilitymodulefinder
+— Find modules used by a scriptrunpy
+— Locating and executing Python modulesimportlib
+— The implementation ofimport
+importlib.resources
+– Package resource reading, opening and accessimportlib.resources.abc
+– Abstract base classes for resourcesimportlib.metadata
+– Accessing package metadata- The initialization of the
+sys.path
+module search path
+- Python Language Services
+ast
+— Abstract syntax treessymtable
+— Access to the compiler’s symbol tablestoken
+— Constants used with Python parse treeskeyword
+— Testing for Python keywordstokenize
+— Tokenizer for Python sourcetabnanny
+— Detection of ambiguous indentationpyclbr
+— Python module browser supportpy_compile
+— Compile Python source filescompileall
+— Byte-compile Python librariesdis
+— Disassembler for Python bytecodepickletools
+— Tools for pickle developers
+- MS Windows Specific Services
+- Unix-specific services
+shlex
+— Simple lexical analysisposix
+— The most common POSIX system callspwd
+— The password databasegrp
+— The group databasetermios
+— POSIX style tty controltty
+— Terminal control functionspty
+— Pseudo-terminal utilitiesfcntl
+— Thefcntl
+andioctl
+system callsresource
+— Resource usage informationsyslog
+— Unix syslog library routines
+- Modules command-line interface (CLI)
+- Superseded Modules
+- Removed Modules
+- Security Considerations",,success
+python libraries,Libraries in Python,"In Python, a library is a group of modules that contain functions, classes and methods to perform common tasks like data manipulation, ...",GeeksforGeeks,"Nov 13, 2025",https://www.geeksforgeeks.org/python/libraries-in-python/,article,"In Python, a library is a group of modules that contain functions, classes and methods to perform common tasks like data manipulation, math operations, web scraping and more. Python libraries make coding faster, cleaner and more efficient by providing ready-to-use solutions for different domains such as data science, web development, machine learning and automation.
+Working of Python Library
+When you import a library in Python, it gives access to pre-written code stored in separate modules. In simple terms instead of writing the logic for a task, you import the library that already has it.
+For example, on Windows, libraries are stored as .dll (Dynamic Link Libraries) and on Linux/macOS as .so files. When you run your code, Python automatically loads these modules and makes their functions available to use.
+Types of Python Library
+Python libraries are divided into two main types:
+1. Built-in Python Standard Library
+It is a collection of modules that come bundled with every Python installation, we don’t need to install anything separately. Most of these modules are written in C for better performance.
+Examples of built-in modules:
+- math: Mathematical operations
+- os: Interact with the operating system
+- datetime: Date and time operations
+- random: Generate random numbers
+- json: Handles JSON data encoding and decoding.
+2. External Python Libraries
+External (third-party) libraries are not included with Python by default. You can install them easily using the pip package manager. Popular External Python Libraries:
+- NumPy: It, short for Numerical Python, is the core library for numerical and scientific computing in Python. It provides powerful tools for creating and manipulating arrays, matrices and multidimensional data.
+- Pandas: It is a data analysis and manipulation library built on top of NumPy. It introduces data structures like DataFrame and Series that make it easy to handle structured data efficiently.
+- Matplotlib: It is a data visualization library that helps you create a wide variety of static, animated and interactive plots. It supports charts such as bar graphs, line charts, histograms and scatter plots.
+- SciPy: It, short for Scientific Python, extends the functionality of NumPy by providing tools for advanced mathematical, scientific and engineering computations. It includes modules for optimization, integration, signal processing and linear algebra.
+- TensorFlow: It is an open-source machine learning and deep learning framework developed by Google. It allows developers to build and train neural networks for tasks such as image recognition, natural language processing and predictive modeling.
+- Scikit-learn: It is a popular machine learning library built on top of NumPy and SciPy. It offers simple and efficient tools for classification, regression, clustering and dimensionality reduction.
+- Scrapy: It is a web scraping and data extraction library designed to efficiently crawl websites and gather structured information. It allows developers to create spiders that automatically navigate web pages and collect data.
+- PyTorch: It, developed by Facebook’s AI Research Lab, is a deep learning framework that provides dynamic computation graphs and easy debugging. It supports GPU acceleration, making it suitable for high-performance training of neural networks.
+- PyGame: It is a cross-platform library used for developing 2D games and multimedia applications. It provides modules for handling graphics, sound and user input with ease.
+- PyBrain: It, short for Python-Based Reinforcement Learning, Artificial Intelligence and Neural Network, is a beginner-friendly machine learning library. It offers pre-built algorithms and flexible tools for training neural networks and reinforcement learning models.
+Using Libraries in Python Programs
+To use any library, it first needs to be imported into your Python program using the import statement. Once imported, you can directly call the functions or methods defined inside that library. You can import libraries in three main ways:
+- Import the entire library: import library_name for example, import math
+- Import a specific function or class: from library_name import function_name for example, from math import sqrt
+- Import a library with an alias: import library_name as alias for example, import pandas as pd
+Example 1: This program imports the entire math library and uses one of its functions.
+import math
+A = 16
+print(math.sqrt(A))
+Output
+4.0
+Explanation:
+- Here, the complete math library is imported and we use math.sqrt() to calculate the square root of 16.
+- Since the full library is imported, we must prefix the function with the library name (math.).
+Example 2: This program imports only selected functions from an external library to simplify usage.
+from numpy import array, mean
+a = array([10, 20, 30, 40, 50])
+print(mean(a))
+Output
+30.0
+Explanation:
+- Here, only the array() and mean() functions are imported from the NumPy library.
+- array() is used to create a NumPy array from a list and mean() calculates the average value of all elements in the array.
+- Since these functions are imported directly, we don’t need to use the numpy. prefix each time we call them.",,success
+python libraries,15 Python Libraries You Should Know About,"In this video, I'll share 15 Python libraries that are super cool, and you should know. These libraries can make your life easier, your code ...",YouTube · ArjanCodes,,https://www.youtube.com/watch?v=o06MyVhYte4,article,"About
+Press
+Copyright
+Contact us
+Creator
+Advertise
+Developers
+Terms
+Privacy
+Policy & Safety
+How YouTube works
+Test new features
+© 2026 Google LLC",,success
+python libraries,Top 30 Python Libraries To Know,Top 30 Python Libraries List · 1. Scikit- learn · 2. NuPIC · 3. Ramp · 4. NumPy · 5. Pipenv · 6. TensorFlow · 7. Bob · 8. PyTorch. Introduced by Facebook in ...,Great Learning,,https://www.mygreatlearning.com/blog/open-source-python-libraries/,article,"Contributed by: Shveta Rajpal
+Python Libraries are useful functions that eliminate the need to write code from scratch. Over 137,000 Python libraries are present today, and they play a vital role in developing machine learning, data science, data visualization, image and data manipulation applications, and more. Let us briefly introduce the Python Libraries and directly dive into the most popular libraries.
+What is a Python Library?
+A Python library is a collection of modules and packages that offer a wide range of functionalities. These libraries enable developers to perform various tasks without writing code from scratch.
+They contain pre-written code, classes, functions, and routines that can be used to develop applications, automate tasks, manipulate data, perform mathematical computations, and more.
+Python’s extensive ecosystem of libraries covers diverse areas such as web development (e.g., Django, Flask), data analysis (e.g., pandas, NumPy), machine learning (e.g., TensorFlow , scikit-learn), image processing (e.g., Pillow, OpenCV), scientific computing (e.g., SciPy), and many others.
+This wealth of libraries significantly contributes to Python’s popularity among developers, researchers, and data scientists, as it simplifies the development process and efficiently implements complex functionality.
+Test your Python fundamental knowledge and skills, take this Python Quiz.
+How to Use Python Libraries
+- Import Libraries:
+- Begin by importing libraries using the
+import
+statement. - You can import entire libraries or specific modules within a library.
+- Begin by importing libraries using the
+- Utilize Functions and Classes:
+- Access functions, classes, and other objects provided by the library.
+- Use imported functions and classes in your program as needed.
+- Read Documentation:
+- Familiarize yourself with the documentation of the libraries you use.
+- Documentation provides details about available functionalities, parameters, return values, and usage examples.
+- Manage Dependencies:
+- Use tools like
+pip
+to install required libraries and their dependencies. - Consider using virtual environments to isolate dependencies for different projects and prevent version conflicts.
+- Use tools like
+- Optimize Performance:
+- Libraries often contain optimized code for common tasks, leading to better performance.
+- Leveraging libraries can result in more efficient and faster code execution.
+- Customize Functionality:
+- Libraries may offer options for customization or extension.
+- Customize functionality by subclassing existing classes, overriding methods, or using configuration options provided by the library.
+In this course, you will learn the fundamentals of Python: from basic syntax to mastering data structures, loops, and functions. You will also explore OOP concepts and objects to build robust programs.
+Top 30 Python Libraries List
+| Rank | Library | Primary Use Case |
+|---|---|---|
+| 1 | NumPy | Scientific Computing |
+| 2 | Pandas | Data Analysis |
+| 3 | Matplotlib | Data Visualization |
+| 4 | SciPy | Scientific Computing |
+| 5 | Scikit-learn | Machine Learning |
+| 6 | TensorFlow | Machine Learning/AI |
+| 7 | Keras | Machine Learning/AI |
+| 8 | PyTorch | Machine Learning/AI |
+| 9 | Flask | Web Development |
+| 10 | Django | Web Development |
+| 11 | Requests | HTTP for Humans |
+| 12 | BeautifulSoup | Web Scraping |
+| 13 | Selenium | Web Testing/Automation |
+| 14 | PyGame | Game Development |
+| 15 | SymPy | Symbolic Mathematics |
+| 16 | Pillow | Image Processing |
+| 17 | SQLAlchemy | Database Access |
+| 18 | Plotly | Interactive Visualization |
+| 19 | Dash | Web Applications |
+| 20 | Jupyter | Interactive Computing |
+| 21 | FastAPI | Web APIs |
+| 22 | PySpark | Big Data Processing |
+| 23 | NLTK | Natural Language Processing |
+| 24 | spaCy | Natural Language Processing |
+| 25 | Tornado | Web Development |
+| 26 | Streamlit | Data Apps |
+| 27 | Bokeh | Data Visualization |
+| 28 | PyTest | Testing Framework |
+| 29 | Celery | Task Queuing |
+| 30 | Gunicorn | WSGI HTTP Server |
+This table includes libraries essential for data scientists, web developers, and software engineers working with Python. Each library has its own strengths and is chosen for specific tasks, from web development frameworks like Django and Flask to machine learning libraries like TensorFlow and PyTorch to data analysis and visualization tools like Pandas and Matplotlib.
+The sheer number of available libraries—over 137,000—can be overwhelming for a beginner. However, once you master the building blocks like variables, loops, and data types, these tools become much easier to navigate. To help you get started on the right foot, this Free Python Course covers all the essentials. It is designed for absolute beginners to help them build the logic required for tasks like 'What-If Analysis' and data manipulation using Python.""
+Python Fundamentals for Beginners Free Course
+Master Python basics, from variables to data structures and control flow. Solve real-time problems and build practical skills using Jupyter Notebook.
+1. Scikit- learn
+It is a free software machine learning library for the Python programming language. It can be effectively used for a variety of applications which include classification, regression, clustering, model selection, naive Bayes’, grade boosting, K-means, and preprocessing.
+Scikit-learn requires:
+- Python (>= 2.7 or >= 3.3),
+- NumPy (>= 1.8.2),
+- SciPy (>= 0.13.3).
+Spotify uses Scikit-learn for its music recommendations and Evernote for building its classifiers. If you already have a working installation of NumPy and scipy, the easiest way to install scikit-learn is by using pip.
+2. NuPIC
+The Numenta Platform for Intelligent Computing (NuPIC) is a platform that aims to implement an HTM learning algorithm and make them a public source as well. It is the foundation for future machine learning algorithms based on the biology of the neocortex. Click here to check their code on GitHub.
+3. Ramp
+It is a Python library that is used for the rapid prototyping of machine-learning models. Ramp provides a simple, declarative syntax for exploring features, algorithms, and transformations. It is a lightweight pandas-based machine-learning framework and can be used seamlessly with existing Python machine-learning and statistics tools.
+4. NumPy
+When it comes to scientific computing, NumPy is one of the fundamental packages for Python, providing support for large multidimensional arrays and matrices along with a collection of high-level mathematical functions to execute these functions swiftly. NumPy relies on BLAS and LAPACK for efficient linear algebra computations. NumPy can also be used as an efficient multi-dimensional container of generic data.
+The various NumPy installation packages can be found here.
+5. Pipenv
+The officially recommended tool for Python in 2017 – Pipenv is a production-ready tool that aims to bring the best of all packaging worlds to the Python world. The cardinal purpose is to provide users with a working environment that is easy to set up. Pipenv, the “Python Development Workflow for Humans,” was created by Kenneth Reitz for managing package discrepancies. The instructions to install Pipenv can be found here.
+6. TensorFlow
+TensorFlow's most popular deep learning framework is an open-source software library for high-performance numerical computation. It is an iconic math library and is also used for Python in machine learning and deep learning algorithms. Tensorflow was developed by the researchers at the Google Brain team within the Google AI organization. Today, it is being used by researchers for machine learning algorithms and by physicists for complex mathematical computations. The following operating systems support TensorFlow: macOS 10.12.6 (Sierra) or later; Ubuntu 16.04 or later; Windows 7 or above; Raspbian 9.0 or later.
+Do check out our Free Course on Tensorflow and Keras and TensorFlow python. This course will introduce you to these two frameworks and will also walk you through a demo of how to use these frameworks.
+7. Bob
+Developed at Idiap Research Institute in Switzerland, Bob is a free signal processing and machine learning toolbox. The toolbox is written in a mix of Python and C++. From image recognition to image and video processing using machine learning algorithms, a large number of packages are available in Bob to make all of this happen with great efficiency in a short time.
+8. PyTorch
+Introduced by Facebook in 2017, PyTorch is a Python package that gives the user a blend of 2 high-level features – Tensor computation (like NumPy) with strong GPU acceleration and the development of Deep Neural Networks on a tape-based auto diff system. PyTorch provides a great platform to execute Deep Learning models with increased flexibility and speed built to be integrated deeply with Python.
+Looking to get started with PyTorch? Check out these PyTorch courses to help you get started quickly and easily.
+9. PyBrain
+PyBrain contains algorithms for neural networks that can be used by entry-level students yet can be used for state-of-the-art research. The goal is to offer simple, flexible yet sophisticated, and powerful algorithms for machine learning with many pre-determined environments to test and compare your algorithms. Researchers, students, developers, lecturers, you, and I can use PyBrain.
+10. MILK
+This machine learning toolkit in Python focuses on supervised classification with a gamut of classifiers available: SVM, k-NN, random forests, and decision trees. A range of combinations of these classifiers gives different classification systems. For unsupervised learning, one can use k-means clustering and affinity propagation. There is a strong emphasis on speed and low memory usage. Therefore, most of the performance-sensitive code is in C++. Read more about it here.
+11. Keras
+It is an open-source neural network library written in Python designed to enable fast experimentation with deep neural networks. With deep learning becoming ubiquitous, Keras becomes the ideal choice as it is API designed for humans and not machines, according to the creators. With over 200,000+users as of November 2023, Keras has stronger adoption in both the industry and the research community, even over TensorFlow or Theano. Before installing Keras, it is advised to install the TensorFlow backend engine.
+12. Dash
+From exploring data to monitoring your experiments, Dash is like the front end to the analytical Python backend. This productive Python framework is ideal for data visualization apps particularly suited for every Python user. The ease we experience is a result of extensive and exhaustive effort.
+13. Pandas
+It is an open-source, BSD-licensed library. Pandas enable the provision of easy data structure and quicker data analysis for Python. For operations like data analysis and modeling, Pandas makes it possible to carry these out without needing to switch to more domain-specific language like R. The best way to install Pandas is by Conda installation.
+14. Scipy
+This is yet another open-source software used for scientific computing in Python. Apart from that, Scipy is also used for Data Computation, productivity, high-performance computing, and quality assurance. The various installation packages can be found here. The core Scipy packages are Numpy, SciPy library, Matplotlib, IPython, Sympy, and Pandas.
+15. Matplotlib
+All the libraries that we have discussed are capable of a gamut of numeric operations, but when it comes to dimensional plotting, Matplotlib steals the show. This open-source library in Python is widely used for publishing quality figures in various hard copy formats and interactive environments across platforms. You can design charts, graphs, pie charts, scatterplots, histograms, error charts, etc., with just a few lines of code.
+The various installation packages can be found here.
+16. Theano
+This open-source python library enables you to efficiently define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays. For a humongous volume of data, handcrafted C codes become slower.
+Theano enables swift implementations of code. Theano can recognize unstable expressions and yet compute them with stable algorithms, giving it an upper hand over NumPy. The closest Python package to Theano is Sympy. So let us talk about it.
+17. SymPy
+For all the symbolic mathematics, SymPy is the answer. This Python library for symbolic mathematics is an effective aid for computer algebra systems (CAS) while keeping the code as simple as possible to be comprehensible and easily extensible. SimPy is written in Python only and can be embedded in other applications and extended with custom functions. You can find the source code on GitHub.
+18. Caffe2
+The new boy in town – Caffe2, is a Lightweight, Modular, and Scalable Deep Learning Framework. It aims to provide an easy and straightforward way for you to experiment with deep learning. Thanks to Python and C++ APIs in Caffe2, we can create our prototype now and optimize it later. You can get started with Caffe2 now with this step-by-step installation guide.
+19. Seaborn
+When it comes to the visualization of statistical models like heat maps, Seaborn is among the reliable sources. This Python library is derived from Matplotlib and is closely integrated with Pandas data structures. Visit the installation page to see how this package can be installed.
+20. Hebel
+This Python library is a tool for deep learning with neural networks using GPU acceleration with CUDA through pyCUDA. Right now, Hebel implements feed-forward neural networks for classification and regression on one or multiple tasks. Other models such as Autoencoder, Convolutional neural nets, and Restricted Boltzman machines are planned for the future. Follow the link to explore Hebel.
+21. Chainer
+A competitor to Hebel, this Python package aims at increasing the flexibility of deep learning models. The three key focus areas of Chainer include :
+a. Transportation system: The makers of Chainer have consistently shown an inclination toward automatic driving cars, and they have been in talks with Toyota Motors about the same.
+b. Manufacturing industry: Chainer has been used effectively for robotics and several machine learning tools, from object recognition to optimization.
+c. Bio-health care: To deal with the severity of cancer, the makers of Chainer have invested in research of various medical images for the early diagnosis of cancer cells.
+The installation, projects and other details can be found here.
+So here is a list of the common Python Libraries which are worth taking a peek at and, if possible, familiarizing yourself with. If you feel there is some library that deserves to be on the list, do not forget to mention it in the comments.
+22. OpenCV Python
+Open Source Computer Vision or OpenCV is used for image processing. It is a Python package that monitors overall functions focused on instant computer vision. OpenCV provides several inbuilt functions; with the help of this, you can learn Computer Vision. It allows both to read and write images at the same time. Objects such as faces, trees, etc., can be diagnosed in any video or image. It is compatible with Windows, OS-X, and other operating systems. You can get it here.
+To learn OpenCV from basics, check out the OpenCV Tutorial
+23. Theano
+Along with being a Python Library, Theano is also an optimizing compiler. It is used for analyzing, describing, and optimizing different mathematical declarations at the same time. It makes use of multi-dimensional arrays, ensuring that we don’t have to worry about the perfection of our projects. Theano works well with GPUs and has an interface quite similar to Numpy. The library makes computation 140x faster and can be used to detect and analyze any harmful bugs. You can get it here.
+24. NLTK
+The Natural Language Toolkit, NLTK, is one of the popular Python NLP Libraries. It contains a set of processing libraries that provide processing solutions for numerical and symbolic language processing in English only. The toolkit comes with a dynamic discussion forum that allows you to discuss and bring up any issues relating to NLTK.
+25. SQLAlchemy
+SQLAcademy is a Database abstraction library for Python that comes with astounding support for a range of databases and layouts. It provides consistent patterns, is easy to understand, and can be used by beginners too. It improves the speed of communication between Python language and databases and supports most platforms such as Python 2.5, Jython, and Pypy. Using SQLAcademy, you can develop database schemes from scratch.
+26. Bokeh
+A Data visualization library for Python, Bokeh allows interactive visualization. It makes use of HTML and Javascript to provide graphics, making it reliable for contributing web-based applications. It is highly flexible and allows you to convert visualization written in other libraries such as ggplot or matplot lib. Bokeh makes use of straightforward commands to create composite statistical scenarios.
+27. Requests
+Requests enables you to send HTTP/1.1 requests and include headers, form data, multipart files, and parameters using basic Python dictionaries.
+Similarly, it also enables you to retrieve the answer data.
+28. Pyglet
+Pyglet is designed for creating visually appealing games and other applications. Windowing, processing user interface events, joysticks, OpenGL graphics, loading pictures and movies, and playing sounds and music are all supported. Linux, OS X, and Windows all support Pyglet.
+29. LightGBM
+One of the best and most well-known machine learning libraries, gradient boosting, aids programmers in creating new algorithms by using decision trees and other reformulated basic models. As a result, specialized libraries can be used to implement this method quickly and effectively.
+30. Eli5
+The Python-built Eli5 machine learning library aids in addressing the problem of machine learning model predictions that are frequently inaccurate. It combines visualization, debugging all machine learning models, and tracking all algorithmic working processes.
+Important Python Libraries for Data Science
+Master Data Science with Python Course
+Learn Data Science with Python in this comprehensive course! From data wrangling to machine learning, gain the expertise to turn raw data into actionable insights with hands-on practice.
+Here’s a list of interesting and important Python Libraries that will be helpful for all Data Scientists out there. So, let’s start with the 20 most important libraries used in Python-
+Scrapy- Scrapy is a collaborative framework for extracting the data that is required from websites. It is quite a simple and fast tool.
+BeautifulSoup- This is another popular library that is used in Python for extracting or collecting information from websites, i.e., it is used for web scraping.
+statsmodels- As the name suggests, Statsmodels is a Python library that provides many opportunities, such as statistical model analysis and estimation, performing statistical tests, etc. It has a function for statistical analysis to achieve high-performance outcomes while processing large statistical data sets.
+XGBoost- This library is implemented in machine learning algorithms under the Gradient Boosting framework. It provides a high-performance implementation of gradient-boosted decision trees. XGBoost is portable, flexible, and efficient. It provides highly optimized, scalable, and fast implementations of gradient boosting.
+Plotly-This library is used for plotting graphs easily. This works very well in interactive web applications. With this, we can make different types of basic charts like line, pie, scatter, heat maps, polar plots, and so on. We can easily plot a graph of any visualization we can think of using Plotly.
+Pydot- Pydot is used for generating complex-oriented and non-oriented graphs. It is specially used while developing algorithms based on neural networks and decision trees.
+Gensim- It is a Python library for topic modeling and document indexing, which means it is able to extract the underlying topics from a large volume of text. It can handle large text files without loading the entire file in memory.
+PyOD- As the name suggests, it is a Python toolkit for detecting outliers in multivariate data. It provides access to a wide range of outlier detection algorithms. Outlier detection, also known as anomaly detection, refers to the identification of rare items, events, or observations that differ from a population's general distribution.
+This brings us to the end of the blog on the top Python Libraries. We hope that you benefit from the same. If you have any further queries, feel free to leave them in the comments below, and we'll get back to you at the earliest.
+In addition to leveraging these libraries, businesses can enhance their software development processes by utilizing Python development services. These services provide expert developers who can create custom applications, integrate libraries effectively, and optimize code for performance.
+The path below will guide you to become a proficient data scientist.
+| Data Science Course Certificates |
+| Data Science Course Placements |
+| Data Science Course Syllabus |
+| Data Science Course Eligibility |",,success
+python libraries,Python Standard Library Modules (3.13),This page lists the built-in modules that ship with the Python 3.13 Standard Library. These modules are available without extra installation (some are platform- ...,W3Schools,,https://www.w3schools.com/python/python_ref_modules.asp,article,"Python Python Built-in Modules
+This page lists the built-in modules that ship with the Python 3.13 Standard Library.
+These modules are available without extra installation (some are platform-dependent).
+A
+| Module |
+Description |
+Introduced |
+| abc | Tools for defining Abstract Base Classes (interfaces for Python classes). | 2.6 |
+| aifc | Read and write AIFF/AIFF-C audio files. | 1.5.2 |
+| argparse | Parse command line arguments and create user-friendly CLIs. | 2.7 |
+| array | Efficient arrays of basic numeric types (compact alternative to lists). | 1.0 |
+| ast | Work with Python code as an Abstract Syntax Tree (analyze or transform code). | 2.6 |
+| asyncio | Write concurrent code using the async/await syntax (event loop, tasks, IO). | 3.4 |
+| atexit | Register functions to run automatically when the program exits. | 2.0 |
+B
+| Module |
+Description |
+Introduced |
+| base64 | Encode and decode data using Base16, Base32, Base64, etc. | 2.0 |
+| bdb | Debugger framework used by pdb (implements the core debugging logic). | - |
+| binascii | Convert between binary and ASCII (hex, base64 helpers at C speed). | 2.0 |
+| bisect | Maintain sorted lists; insert and search with binary search. | 2.0 |
+| builtins | Access Python's built-in objects like len, range, and exceptions. | 3.0 |
+| bz2 | Read and write bzip2-compressed files and streams. | 2.3 |
+C
+| Module |
+Description |
+Introduced |
+| calendar | Work with dates as calendars; print text calendars and compute month info. | 2.0 |
+| cgi | Helpers for Common Gateway Interface (legacy web server scripts). | 2.0 |
+| cgitb | Pretty tracebacks for CGI scripts (HTML formatted error reports). | - |
+| cmd | Build simple line-oriented command interpreters (REPL-like shells). | 2.0 |
+| code | Run an interactive interpreter or embed one in your program. | 2.0 |
+| codecs | Text encodings and decoding/encoding helpers. | 2.0 |
+| codeop | Compile Python code objects conditionally (used by code editors and shells). | 2.0 |
+| collections | High-performance container datatypes like deque, Counter, namedtuple. | 2.4 |
+| colorsys | Convert between color systems: RGB, YIQ, HLS, HSV. | 2.0 |
+| concurrent | Concurrency framework (futures) for running callables asynchronously. | 3.2 |
+| configparser | Read and write INI-style configuration files. | 3.0 |
+| contextlib | Utilities for context managers and the with-statement. | 2.5 |
+| contextvars | Context-local storage for async code (like thread-local, but for tasks). | 3.7 |
+| copy | Shallow and deep copy operations for Python objects. | 2.0 |
+| copyreg | Register custom pickling functions for complex objects. | 3.0 |
+| csv | Read and write CSV files (comma-separated values) with ease. | 2.3 |
+| ctypes | Call C libraries and work with C-compatible data types. | 2.5 |
+| curses | Terminal handling for character-cell UIs (Unix-like systems only). | 2.0 |
+D
+| Module |
+Description |
+Introduced |
+| dataclasses | Decorator and helpers for classes that store data (auto-generate init, repr, etc.). | 3.7 |
+| datetime | Dates, times, time zones, and timedeltas made simple and precise. | 2.3 |
+| dbm | Family of simple on-disk key/value databases (backed by platform libs). | 2.0 |
+| decimal | Fixed-point and floating decimal arithmetic for money and exact math. | 2.4 |
+| difflib | Compare sequences and create human-readable diffs. | 2.1 |
+| dis | Disassemble Python bytecode for inspection and debugging. | 2.0 |
+| doctest | Test examples embedded in docstrings (keeps docs and code in sync). | 2.1 |
+E
+| Module |
+Description |
+Introduced |
+| email | Parse, build, and send email messages (headers, MIME, attachments). | 2.2 |
+| encodings | Implementation of text encodings used by Python's codec system. | 2.0 |
+| ensurepip | Bootstraps pip into a Python installation. | 3.4 |
+| enum | Define enumerations (named constants) with nice semantics. | 3.4 |
+| errno | Standard error number constants from the OS. | 2.0 |
+F
+| Module |
+Description |
+Introduced |
+| faulthandler | Dump Python tracebacks on a crash or on demand (helps debug hard faults). | 3.3 |
+| filecmp | Compare files and directories to see what changed. | 2.0 |
+| fileinput | Loop over lines from stdin or a list of files as a single stream. | 2.0 |
+| fnmatch | Match filenames using shell-style wildcards. | 2.0 |
+| fractions | Rational numbers (Fractions) for exact arithmetic. | 2.6 |
+| ftplib | FTP client library for transferring files. | 2.0 |
+| functools | Higher-order functions and utilities (lru_cache, partial, wraps, etc.). | 2.5 |
+G
+| Module |
+Description |
+Introduced |
+| gc | Control the garbage collector and inspect tracked objects. | 2.0 |
+| getopt | Parse command-line options (POSIX-style). | 1.5.2 |
+| getpass | Prompt for a password without echoing it to the console. | 2.0 |
+| gettext | Internationalization (i18n) support for translating messages. | 2.3 |
+| glob | Find pathnames matching a pattern like *.py. | 2.0 |
+| graphlib | Topological sorting utilities for dependency graphs. | 3.9 |
+| gzip | Read and write gzip-compressed files and streams. | 2.0 |
+H
+| Module |
+Description |
+Introduced |
+| hashlib | Secure hashes and message digests (SHA, MD5, BLAKE2, etc.). | 2.5 |
+| heapq | Heap queue (priority queue) algorithms on plain lists. | 2.3 |
+| hmac | Keyed-hash message authentication codes (HMAC). | 2.2 |
+| html | HTML helpers (escape/unescape text). | 3.2 |
+| http | HTTP modules package (client, server, cookies). | 3.0 |
+I
+| Module |
+Description |
+Introduced |
+| idlelib | Support for the IDLE interactive Python environment. | - |
+| imaplib | IMAP4 client library for accessing email servers. | 2.0 |
+| imghdr | Determine the type of an image file. | 2.0 |
+| imp | Access the import internals (deprecated; use importlib). | - |
+| importlib | Programmatic interface to Python's import mechanism. | 3.1 |
+| inspect | Inspect live objects such as modules, classes, and functions. | - |
+| io | Input/Output streams and buffering (text and binary). | 2.6 |
+J
+| Module |
+Description |
+Introduced |
+| json | Encode and decode JSON data (JavaScript Object Notation). | 2.6 |
+K
+| Module |
+Description |
+Introduced |
+| keyword | Test for Python keywords; list all keywords. | - |
+L
+| Module |
+Description |
+Introduced |
+| linecache | Read text lines from files with random access. | 2.0 |
+| locale | Internationalization (i18n) support for formatting numbers and dates. | 2.0 |
+| logging | Flexible event logging system with various handlers. | 2.3 |
+| lzma | Compression using the LZMA algorithm (xz format). | 3.3 |
+M
+| Module |
+Description |
+Introduced |
+| mailbox | Work with various mailbox formats (mbox, Maildir, etc.). | 2.3 |
+| mailcap | Read mailcap files (MIME handlers configuration). | 2.0 |
+| marshal | Read and write Python values in a binary format (for .pyc internals). | - |
+| math | Fast math functions: trigonometry, logarithms, constants, etc. | - |
+| mimetypes | Guess a file's type based on its filename or URL. | 2.0 |
+| mmap | Memory-map files for efficient random access. | 2.0 |
+| modulefinder | Find modules used by a script (dependency scanning). | - |
+| msilib | Create and read Microsoft Installer (.msi) files (Windows only). | - |
+| msvcrt | Access to Microsoft C runtime routines (Windows only). | - |
+| multiprocessing | Run code in parallel using processes (bypass the GIL). | 2.6 |
+N
+| Module |
+Description |
+Introduced |
+| netrc | Parse .netrc files for machine login credentials. | 2.0 |
+| nntplib | Client for NNTP (Usenet) news servers. | 2.0 |
+| numbers | Abstract base classes for numeric types. | 2.6 |
+| nis | Interface to Sun's NIS (Yellow Pages) service (Unix platforms). | - |
+| ntpath | Windows path operations (used by os.path on Windows). | 2.0 |
+O
+| Module |
+Description |
+Introduced |
+| operator | Functional interface to operators (add, mul, itemgetter, attrgetter). | 1.5.2 |
+| optparse | Deprecated parser for command line options (use argparse). | 2.3 |
+| os | Operating system interfaces: files, environment, processes. | - |
+P
+| Module |
+Description |
+Introduced |
+| pathlib | Object-oriented filesystem paths. | 3.4 |
+| pdb | Interactive debugger for Python programs. | 2.0 |
+| pickle | Serialize and deserialize Python objects (not secure against untrusted data). | 2.0 |
+| pickletools | Tools for analyzing pickled data. | 2.3 |
+| pipes | Pipe shell commands together (Unix). | 2.0 |
+| pkgutil | Utilities for packages: walk packages, find loaders, etc. | 2.3 |
+| platform | Access to underlying platform information. | 2.3 |
+| plistlib | Read and write Apple .plist files. | 2.6 |
+| poplib | POP3 email client. | 2.0 |
+| posix | POSIX APIs (Unix-only, low-level). | 2.0 |
+| pprint | Pretty-print Python data structures. | 2.0 |
+| profile | Deterministic profiling of Python programs. | 2.0 |
+| pstats | Work with profiling results produced by profile/cProfile. | 2.0 |
+| pty | Pseudo-terminal utilities (Unix). | 2.0 |
+| pyclbr | Read module to get class browser information without importing it. | 2.0 |
+| pydoc | Generate and view Python documentation. | 2.1 |
+| py_compile | Compile Python source files to bytecode. | 2.0 |
+Q
+| Module |
+Description |
+Introduced |
+| queue | Thread-safe FIFO/LIFO/priority queues. | 2.6 |
+| quopri | Encode/decode MIME quoted-printable data. | 2.0 |
+R
+| Module |
+Description |
+Introduced |
+| random | Generate pseudo-random numbers for various distributions. | 2.0 |
+| re | Regular expression operations for pattern matching in strings. | 2.0 |
+| reprlib | Safe string representations for large or recursive structures. | 3.0 |
+| resource | Control and query system resource limits (Unix). | 2.0 |
+| rlcompleter | Tab-completion support for the interactive interpreter. | 2.0 |
+| runpy | Run modules as scripts (like python -m). | 2.5 |
+S
+| Module |
+Description |
+Introduced |
+| sched | Event scheduler for running functions at specific times. | 2.0 |
+| secrets | Generate cryptographically strong random numbers and tokens. | 3.6 |
+| select | Low-level I/O multiplexing (select, poll, epoll, kqueue). | 2.0 |
+| selectors | High-level I/O multiplexing built on select module. | 3.4 |
+| shelve | Simple persistent storage for Python objects (dict-like API). | 2.0 |
+| shlex | Parse shell-like syntaxes into tokens. | 2.0 |
+| shutil | High-level file operations: copy, move, archive, disk usage. | 2.0 |
+| signal | Set handlers for asynchronous signals. | 2.0 |
+| site | Site-specific configuration hook that runs at startup. | 2.0 |
+| smtplib | Send emails using the SMTP protocol. | 2.0 |
+| socket | Low-level networking interface. | 2.0 |
+| socketserver | Framework for network servers (TCP/UDP). | 3.0 |
+| sqlite3 | Built-in lightweight SQL database (SQLite). | 2.5 |
+| ssl | TLS/SSL wrapper for secure network connections. | 2.6 |
+| stat | Constants and helpers for interpreting os.stat() results. | 2.0 |
+| statistics | Basic statistics (mean, median, stdev). | 3.4 |
+| string | Common string constants and helpers. | 2.0 |
+| stringprep | String preparation for internet protocols (IDNA). | 2.3 |
+| struct | Convert between Python values and C structs packed as bytes. | 2.0 |
+| subprocess | Spawn new processes and connect to their input/output/error pipes. | 2.4 |
+| sunau | Read and write Sun AU audio files. | 2.0 |
+| symtable | Access the compiler's internal symbol tables. | 2.6 |
+| sys | Access to interpreter variables and functions. | - |
+| sysconfig | Access Python's configuration information. | 3.2 |
+T
+| Module |
+Description |
+Introduced |
+| tabnanny | Detect ambiguous indentation in Python source files. | 2.0 |
+| tarfile | Read and write tar archives, including gzip/bz2/xz. | 2.3 |
+| telnetlib | Telnet client implementation. | 2.0 |
+| tempfile | Create temporary files and directories safely. | 2.0 |
+| termios | POSIX terminal control (Unix). | 2.0 |
+| test | Regression tests package for the Python standard library. | 2.0 |
+| textwrap | Wrap and fill text paragraphs. | 2.3 |
+| threading | Higher-level threading interface (locks, events, threads). | 2.0 |
+| time | Time access and conversions. | - |
+| timeit | Measure execution time of small code snippets. | 2.3 |
+| tkinter | Standard GUI toolkit (Tk interface) package. | 3.0 |
+| token | Token constants used by the Python tokenizer. | 2.0 |
+| tokenize | Turn Python source into tokens (lexical scanner). | 2.0 |
+| tomllib | Read TOML files into Python data structures. | 3.11 |
+| trace | Trace program execution and produce coverage reports. | 2.0 |
+| traceback | Print or retrieve stack traces. | 2.0 |
+| tracemalloc | Track memory allocations to find leaks and hotspots. | 3.4 |
+| tty | Terminal control functions (Unix). | 2.0 |
+| turtle | Simple graphics library for teaching and fun. | 2.5 |
+| types | Names for built-in types and helper factories. | 2.0 |
+| typing | Type hints and typing helpers for static analysis and tooling. | 3.5 |
+U
+| Module |
+Description |
+Introduced |
+| unicodedata | Access the Unicode Character Database (properties, normalization). | 2.0 |
+| unittest | Unit testing framework (xUnit style) for Python. | 2.1 |
+| urllib | Package for working with URLs (requests, parsing, robots). | 2.0 |
+| uuid | Generate universally unique identifiers (UUIDs). | 2.5 |
+V
+| Module |
+Description |
+Introduced |
+| venv | Create lightweight isolated Python environments. | 3.3 |
+W
+| Module |
+Description |
+Introduced |
+| warnings | Issue and control warning messages. | 2.0 |
+| wave | Read and write WAV audio files. | 2.0 |
+| weakref | Weak references to objects (avoid reference cycles). | 2.0 |
+| webbrowser | Open URLs in a web browser. | 2.0 |
+| wsgiref | WSGI utilities and simple reference server for web apps. | 2.3 |
+X
+| Module |
+Description |
+Introduced |
+| xdrlib | Pack and unpack XDR data (External Data Representation). | 2.0 |
+| xml | XML processing package. | 2.0 |
+| xmlrpc | XML-RPC client and server package. | 2.2 |
+Z
+| Module |
+Description |
+Introduced |
+| zipapp | Create executable Python zip applications. | 3.5 |
+| zipfile | Read and write ZIP archives. | 2.0 |
+| zipimport | Import modules from ZIP archives. | 2.3 |
+| zlib | Compress and decompress data using zlib. | 2.0 |
+| zoneinfo | IANA time zone support for datetime. | 3.9 |
+Note: This page lists Python 3.13 Standard Library modules. Some modules are platform-specific (Unix/Windows) or optional at build time.",,success
+python libraries,vinta/awesome-python: An opinionated list of ...,"An opinionated list of Python frameworks, libraries, tools, and resources - vinta/awesome-python.",GitHub,,https://github.com/vinta/awesome-python,article,"An opinionated list of Python frameworks, libraries, tools, and resources.
+- pyr: Zero-config Python project manager. Bootstraps its own runtime, app-convention, and working imports - out the box.
+The #10 most-starred repo on GitHub. Put your product in front of Python developers. Become a sponsor.
+AI & ML
+- AI and Agents
+- Deep Learning
+- Machine Learning
+- Natural Language Processing
+- Computer Vision
+- Recommender Systems
+Web Development
+- Web Frameworks
+- Web APIs
+- Web Servers
+- WebSocket
+- Template Engines
+- Web Asset Management
+- Authentication
+- Admin Panels
+- CMS
+- Static Site Generators
+HTTP & Scraping
+Database & Storage
+Data & Science
+Developer Tools
+- Algorithms and Design Patterns
+- Interactive Interpreter
+- Code Analysis
+- Testing
+- Debugging Tools
+- Build Tools
+- Documentation
+DevOps
+- DevOps Tools
+- Distributed Computing
+- Task Queues
+- Messaging
+- Job Schedulers
+- Logging
+- Network Virtualization
+CLI & GUI
+Text & Documents
+Media
+Python Language
+- Implementations
+- Built-in Classes Enhancement
+- Functional Programming
+- Asynchronous Programming
+- Date and Time
+Python Toolchain
+Security
+Miscellaneous
+AI & ML
+Libraries for building AI applications, LLM integrations, and autonomous agents.
+- Agent Skills
+- django-ai-plugins - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
+- sentry-skills - Python-focused engineering skills for code review, debugging, and backend workflows.
+- trailofbits-skills - Python-friendly security skills for auditing, testing, and safer backend development. Also skills-curated.
+- Orchestration
+- ag2 - An open-source AgentOS for multi-agent orchestration and building agentic AI systems.
+- autogen - A programming framework for building agentic AI applications.
+- bub - A lightweight, hook-first Python framework for channel-native agents that live alongside people.
+- crewai - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
+- dspy - A framework for programming, not prompting, language models.
+- hermes-agent - An adaptive AI agent framework that grows with you.
+- langchain - Building applications with LLMs through composability.
+- openai-agents - OpenAI's framework for building and managing AI agents.
+- OpenChronicle - Open-source, local-first memory for any tool-capable LLM agent.
+- pydantic-ai - A Python agent framework for building generative AI applications with structured schemas.
+- TradingAgents - A multi-agents LLM financial trading framework.
+- Data Layer
+- instructor - A library for extracting structured data from LLMs, powered by Pydantic.
+- llama-index - A data framework for your LLM application.
+- mem0 - An intelligent memory layer for AI agents enabling personalized interactions.
+- Pre-trained Models and Inference
+- diffusers - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
+- mlx-lm - Run and fine-tune large language models on Apple Silicon with MLX.
+- sglang - A high-performance serving framework for large language models and multimodal models.
+- transformers - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
+- unsloth - A library for faster LLM fine-tuning and training with reduced memory usage.
+- vllm - A high-throughput and memory-efficient inference and serving engine for LLMs.
+- Speech
+- openai-whisper - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
+- vibevoice - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
+- voxcpm - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.
+Frameworks for Neural Networks and Deep Learning. Also see awesome-deep-learning.
+- jax - A library for high-performance numerical computing with automatic differentiation and JIT compilation.
+- keras - A high-level deep learning library with support for JAX, TensorFlow, and PyTorch backends.
+- pytorch-lightning - Deep learning framework to train, deploy, and ship AI products Lightning fast.
+- pytorch - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
+- stable-baselines3 - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.
+- tensorflow - The most popular Deep Learning framework created by Google.
+Libraries for Machine Learning. Also see awesome-machine-learning.
+- catboost - A fast, scalable, high performance gradient boosting on decision trees library.
+- feature_engine - sklearn compatible API with the widest toolset for feature engineering and selection.
+- h2o - Open Source Fast Scalable Machine Learning Platform.
+- lightgbm - A fast, distributed, high performance gradient boosting framework.
+- mindsdb - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+- pgmpy - A Python library for probabilistic graphical models and Bayesian networks.
+- scikit-learn - The most popular Python library for Machine Learning with extensive documentation and community support.
+- spark.ml - Apache Spark's scalable Machine Learning library for distributed computing.
+- TabGAN - Synthetic tabular data generation using GANs, Diffusion Models, and LLMs.
+- timesfm - A pretrained foundation model from Google Research for time-series forecasting.
+- xgboost - A scalable, portable, and distributed gradient boosting library.
+Libraries for working with human languages.
+- General
+- gensim - Topic Modeling for Humans.
+- nltk - A leading platform for building Python programs to work with human language data.
+- spacy - A library for industrial-strength natural language processing in Python and Cython.
+- stanza - The Stanford NLP Group's official Python library, supporting 60+ languages.
+- Chinese
+Libraries for Computer Vision.
+- easyocr - Ready-to-use OCR with 40+ languages supported.
+- kornia - Open Source Differentiable Computer Vision Library for PyTorch.
+- opencv - Open Source Computer Vision Library.
+- pytesseract - A wrapper for Google Tesseract OCR.
+Libraries for building recommender systems.
+- annoy - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
+- implicit - A fast Python implementation of collaborative filtering for implicit datasets.
+- scikit-surprise - A scikit for building and analyzing recommender systems.
+Web Development
+Traditional full stack web frameworks. Also see Web APIs.
+- Synchronous
+- bottle - A fast and simple micro-framework distributed as a single file with no dependencies.
+- django - The most popular web framework in Python.
+- flask - A microframework for Python.
+- pyramid - A small, fast, down-to-earth, open source Python web framework.
+- fasthtml - The fastest way to create an HTML app.
+- masonite - The modern and developer centric Python web framework.
+- Asynchronous
+- litestar - Production-ready, capable and extensible ASGI Web framework.
+- microdot - The impossibly small web framework for Python and MicroPython.
+- reflex - A framework for building reactive, full-stack web applications entirely with Python.
+- robyn - A high-performance async Python web framework with a Rust runtime.
+- starlette - A lightweight ASGI framework and toolkit for building high-performance async services.
+- tornado - A web framework and asynchronous networking library.
+Libraries for building RESTful and GraphQL APIs.
+- Django
+- django-modern-rest - Modern REST with speed, types, async,
+msgspec
+,pydantic
+and other goodies! - django-ninja - Fast, Django REST framework based on type hints and Pydantic.
+- django-rest-framework - A powerful and flexible toolkit to build web APIs.
+- strawberry-django - Strawberry GraphQL integration with Django.
+- django-modern-rest - Modern REST with speed, types, async,
+- Flask
+- apiflask - A lightweight Python web API framework based on Flask and Marshmallow.
+- Framework Agnostic
+- connexion - A spec-first framework that automatically handles requests based on your OpenAPI specification.
+- falcon - A high-performance framework for building cloud APIs and web app backends.
+- fastapi - A modern, fast, web framework for building APIs with standard Python type hints.
+- sanic - A Python 3.6+ web server and web framework that's written to go fast.
+- strawberry - A GraphQL library that leverages Python type annotations for schema definition.
+- webargs - A friendly library for parsing HTTP request arguments with built-in support for popular web frameworks.
+ASGI and WSGI compatible web servers.
+- ASGI
+- daphne - An HTTP, HTTP/2 and WebSocket protocol server for ASGI and ASGI-HTTP.
+- granian - A Rust HTTP server for Python applications built on top of Hyper and Tokio, supporting WSGI/ASGI/RSGI.
+- hypercorn - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
+- uvicorn - A lightning-fast ASGI server implementation, using uvloop and httptools.
+- WSGI
+- RPC
+Libraries for working with WebSocket.
+- autobahn-python - WebSocket & WAMP for Python on Twisted and asyncio.
+- channels - Developer-friendly asynchrony for Django.
+- flask-socketio - Socket.IO integration for Flask applications.
+- picows - Fastest WebSocket clients and servers with a frame level interface for the most demanding use-cases.
+- websockets - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
+Libraries and tools for templating and lexing.
+- jinja - A modern and designer friendly templating language.
+- mako - Hyperfast and lightweight templating for the Python platform.
+Tools for managing, compressing and minifying website assets.
+- django-compressor - Compresses linked and inline JavaScript or CSS into a single cached file.
+- django-storages - A collection of custom storage back ends for Django.
+Libraries for implementing authentication schemes.
+- OAuth
+- authlib - JavaScript Object Signing and Encryption draft implementation.
+- django-allauth - Authentication app for Django that ""just works.""
+- django-oauth-toolkit - OAuth 2 goodies for Django.
+- oauthlib - A generic and thorough implementation of the OAuth request-signing logic.
+- JWT
+- pyjwt - JSON Web Token implementation in Python.
+- Permissions
+- django-guardian - Implementation of per object permissions for Django 1.2+
+- django-rules - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
+Libraries for administrative interfaces.
+- ajenti - The admin panel your servers deserve.
+- django-grappelli - A jazzy skin for the Django Admin-Interface.
+- django-unfold - Elevate your Django admin with a stunning modern interface, powerful features, and seamless user experience.
+- flask-admin - Simple and extensible administrative interface framework for Flask.
+- flower - Real-time monitor and web admin for Celery.
+- func-to-web - Instantly create web UIs from Python functions using type hints. Zero frontend code required.
+- jet-bridge - Admin panel framework for any application with nice UI (ex Jet Django).
+Content Management Systems.
+- django-cms - The easy-to-use and developer-friendly enterprise CMS powered by Django.
+- indico - A feature-rich event management system, made @ CERN.
+- wagtail - A Django content management system.
+Static site generator is a software that takes some text + templates as input and produces HTML files on the output.
+- lektor - An easy to use static CMS and blog engine.
+- nikola - A static website and blog generator.
+- pelican - Static site generator that supports Markdown and reST syntax.
+HTTP & Scraping
+Libraries for working with HTTP.
+- aiohttp - Asynchronous HTTP client/server framework for asyncio and Python.
+- furl - A small Python library that makes parsing and manipulating URLs easy.
+- httptap - Dissects an HTTP request into DNS, TCP, TLS, wait, and transfer phases and renders the timings as a waterfall.
+- httpx - A next generation HTTP client for Python.
+- requests - HTTP Requests for Humans.
+- urllib3 - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
+Libraries to automate web scraping and extract web content.
+- Frameworks
+- browser-use - Make websites accessible for AI agents with easy browser automation.
+- crawl4ai - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
+- mechanicalsoup - A Python library for automating interaction with websites.
+- scrapy - A fast high-level screen scraping and web crawling framework.
+- Content Extraction
+- feedparser - Universal feed parser.
+- html2text - Convert HTML to Markdown-formatted text.
+- micawber - A small library for extracting rich content from URLs.
+- sumy - A module for automatic summarization of text documents and HTML pages.
+- trafilatura - A tool for gathering text and metadata from the web, with built-in content filtering.
+Libraries for sending and parsing email, and mail server management.
+- modoboa - A mail hosting and management platform including a modern Web UI.
+- yagmail - Yet another Gmail/SMTP client.
+Database & Storage
+Libraries that implement Object-Relational Mapping or data mapping techniques.
+- Relational Databases
+- django.db.models - The Django ORM.
+- sqlalchemy - The Python SQL Toolkit and Object Relational Mapper.
+- dataset - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+- peewee - A small, expressive ORM.
+- pony - ORM that provides a generator-oriented interface to SQL.
+- sqlmodel - SQLModel is based on Python type annotations, and powered by Pydantic and SQLAlchemy.
+- tortoise-orm - An easy-to-use asyncio ORM inspired by Django, with relations support.
+- NoSQL Databases
+- beanie - An asynchronous Python object-document mapper (ODM) for MongoDB.
+- mongoengine - A Python Object-Document-Mapper for working with MongoDB.
+- pynamodb - A Pythonic interface for Amazon DynamoDB.
+Libraries for connecting and operating databases.
+- MySQL - awesome-mysql
+- mysqlclient - MySQL connector with Python 3 support (mysql-python fork).
+- pymysql - A pure Python MySQL driver compatible to mysql-python.
+- PostgreSQL - awesome-postgres
+- psycopg - The most popular PostgreSQL adapter for Python.
+- SQLite - awesome-sqlite
+- sqlite-utils - Python CLI utility and library for manipulating SQLite databases.
+- sqlite3 - (Python standard library) SQLite interface compliant with DB-API 2.0.
+- Other Relational Databases
+- clickhouse-driver - Python driver with native interface for ClickHouse.
+- mssql-python - Official Microsoft driver for SQL Server and Azure SQL, built on ODBC for high performance and low memory usage.
+- NoSQL Databases
+- cassandra-driver - The Python Driver for Apache Cassandra.
+- django-mongodb-backend - Official MongoDB database backend for Django.
+- pymongo - The official Python client for MongoDB.
+- redis-py - The Python client for Redis.
+Databases implemented in Python.
+- chromadb - An open-source embedding database for building AI applications with embeddings and semantic search.
+- duckdb - An in-process SQL OLAP database management system; optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
+- pickledb - A simple and lightweight key-value store for Python.
+- tinydb - A tiny, document-oriented database.
+- ZODB - A native object database for Python. A key-value and object graph database.
+Libraries for caching data.
+- cachetools - Extensible memoizing collections and decorators.
+- django-cacheops - A slick ORM cache with automatic granular event-driven invalidation.
+- dogpile.cache - dogpile.cache is a next generation replacement for Beaker made by the same authors.
+- python-diskcache - SQLite and file backed cache backend with faster lookups than memcached and redis.
+Libraries and software for indexing and performing search queries on data.
+- django-haystack - Modular search for Django.
+- elasticsearch-py - The official low-level Python client for Elasticsearch.
+- pysolr - A lightweight Python wrapper for Apache Solr.
+Libraries for serializing complex data types.
+- marshmallow - A lightweight library for converting complex objects to and from simple Python datatypes.
+- msgpack - MessagePack serializer implementation for Python.
+- orjson - Fast, correct JSON library.
+Data & Science
+Libraries for data analysis.
+- General
+- aws-sdk-pandas - Pandas on AWS.
+- datasette - An open source multi-tool for exploring and publishing data.
+- data-profiling - Generate detailed data profiling reports for pandas DataFrames.
+- desbordante - An open source data profiler for complex pattern discovery.
+- ibis - A portable Python dataframe library with a single API for 20+ backends.
+- modin - A drop-in pandas replacement that scales workflows by changing a single line of code.
+- pandas - A library providing high-performance, easy-to-use data structures and data analysis tools.
+- pathway - Real-time data processing framework for Python with reactive dataflows.
+- polars - A fast DataFrame library implemented in Rust with a Python API.
+- Financial Data
+- akshare - A financial data interface library, built for human beings!
+- edgartools - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
+- lumibot - Algorithmic trading framework for backtesting and live deployment across stocks, options, crypto, futures, and forex.
+- openbb - A financial data platform for analysts, quants and AI agents.
+- yfinance - Easy Pythonic way to download market and financial data from Yahoo Finance.
+Libraries for validating data. Used for forms in many cases.
+- cerberus - A lightweight and extensible data validation library.
+- jsonschema - An implementation of JSON Schema for Python.
+- pandera - A data validation library for dataframes, with support for pandas, polars, and Spark.
+- pydantic - Data validation using Python type hints.
+- voluptuous - A Python data validation library primarily intended for validating data from untrusted sources.
+Libraries for visualizing data. Also see awesome-javascript.
+- Plotting
+- altair - Declarative statistical visualization library for Python.
+- bokeh - Interactive Web Plotting for Python.
+- bqplot - Interactive Plotting Library for the Jupyter Notebook.
+- matplotlib - A Python 2D plotting library.
+- plotly - Interactive graphing library for Python.
+- plotnine - A grammar of graphics for Python based on ggplot2.
+- pygal - A Python SVG Charts Creator.
+- pyqtgraph - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+- seaborn - Statistical data visualization using Matplotlib.
+- ultraplot - Matplotlib wrapper for publication-ready scientific figures with minimal code. Includes advanced subplot management, panel layouts, and batteries-included geoscience plotting.
+- vispy - High-performance scientific visualization based on OpenGL.
+- Specialized
+- cartopy - A cartographic python library with matplotlib support.
+- pygraphviz - Python interface to Graphviz.
+- Dashboards and Apps
+Libraries for geocoding addresses and working with latitudes and longitudes.
+- django-countries - A Django app that provides a country field for models and forms.
+- geodjango - A world-class geographic web framework that is part of Django.
+- geojson - Python bindings and utilities for GeoJSON.
+- geopandas - Python tools for geographic data (GeoSeries/GeoDataFrame) built on pandas.
+- geopy - Python Geocoding Toolbox.
+Libraries for scientific computing. Also see Python-for-Scientists.
+- Core
+- numba - Python JIT compiler to LLVM aimed at scientific Python.
+- numpy - A fundamental package for scientific computing with Python.
+- scipy - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
+- statsmodels - Statistical modeling and econometrics in Python.
+- sympy - A Python library for symbolic mathematics.
+- Biology and Chemistry
+- biopython - Biopython is a set of freely available tools for biological computation.
+- cclib - A library for parsing and interpreting the results of computational chemistry packages.
+- openbabel - A chemical toolbox designed to speak the many languages of chemical data.
+- rdkit - Cheminformatics and Machine Learning Software.
+- Physics and Engineering
+- astropy - A community Python library for Astronomy.
+- obspy - A Python toolbox for seismology.
+- pydy - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
+- PythonRobotics - This is a compilation of various robotics algorithms with visualizations.
+- Simulation and Modeling
+- Other
+Libraries for quantum computing.
+- Cirq — A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
+- pennylane — A hybrid quantum-classical machine learning library with automatic differentiation support.
+- qiskit — An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
+- qutip - Quantum Toolbox in Python.
+Developer Tools
+Python implementation of data structures, algorithms and design patterns. Also see awesome-algorithms.
+- Algorithms
+- algorithms - Minimal examples of data structures and algorithms.
+- sortedcontainers - Fast and pure-Python implementation of sorted collections.
+- thealgorithms - All Algorithms implemented in Python.
+- Design Patterns
+- python-patterns - A collection of design patterns in Python.
+- transitions - A lightweight, object-oriented finite state machine implementation.
+Interactive Python interpreters (REPL).
+- jupyter - A rich toolkit to help you make the most out of using Python interactively.
+- marimo - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
+- ptpython - Advanced Python REPL built on top of the python-prompt-toolkit.
+Tools of static analysis, linters and code quality checkers. Also see awesome-static-analysis.
+- Code Analysis
+- code2flow - Turn your Python and JavaScript code into DOT flowcharts.
+- prospector - A tool to analyze Python code.
+- repowise - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
+- vulture - A tool for finding and analyzing dead Python code.
+- Code Linters
+- Code Formatters
+- Refactoring
+- rope - Rope is a python refactoring library.
+- Type Checkers - awesome-python-typing
+- Type Annotations Generators
+- monkeytype - A system for Python that generates static type annotations by collecting runtime types.
+- pytype - Pytype checks and infers types for Python code - without requiring type annotations.
+Libraries for testing codebases and generating test data.
+- Frameworks
+- hypothesis - Hypothesis is an advanced Quickcheck style property based testing library.
+- pytest - A mature full-featured Python testing tool.
+- robotframework - A generic test automation framework.
+- scanapi - Automated Testing and Documentation for your REST API.
+- unittest - (Python standard library) Unit testing framework.
+- Test Runners
+- GUI / Web Testing
+- locust - Scalable user load testing tool written in Python.
+- playwright-python - Python version of the Playwright testing and automation library.
+- pyautogui - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
+- schemathesis - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
+- selenium - Python bindings for Selenium WebDriver.
+- Mock
+- freezegun - Travel through time by mocking the datetime module.
+- mock - (Python standard library) A mocking and patching library.
+- mocket - A socket mock framework with gevent/asyncio/SSL support.
+- responses - A utility library for mocking out the requests Python library.
+- respx - Mock HTTPX with awesome request patterns and response side effects.
+- vcrpy - Record and replay HTTP interactions on your tests.
+- Object Factories
+- factory_boy - A test fixtures replacement for Python.
+- polyfactory - mock data generation library with support to classes (continuation of
+pydantic-factories
+)
+- Code Coverage
+- coverage - Code coverage measurement.
+- Fake Data
+Libraries for debugging code.
+- pdb-like Debugger
+- Tracing
+- manhole - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
+- python-hunter - A flexible code tracing toolkit.
+- Profiler
+- Others
+- django-debug-toolbar - Display various debug information for Django.
+- flask-debugtoolbar - A port of the django-debug-toolbar to flask.
+- icecream - Inspect variables, expressions, and program execution with a single, simple function call.
+- memory_graph - Visualize Python data at runtime to debug references, mutability, and aliasing.
+Compile software from source code.
+- bitbake - A make-like build tool for embedded Linux.
+- invoke - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
+- platformio - A console tool to build code with different development platforms.
+- pybuilder - A continuous build tool written in pure Python.
+- doit - A task runner and build tool.
+- scons - A software construction tool.
+Libraries for generating project documentation.
+- sphinx - Python Documentation generator.
+- diagrams - Diagram as Code.
+- mkdocs - Markdown friendly documentation generator.
+- pdoc - Epydoc replacement to auto generate API documentation for Python libraries.
+DevOps
+Software and libraries for DevOps.
+- Cloud Providers
+- Configuration Management
+- ansible - A radically simple IT automation platform.
+- cloudinit - A multi-distribution package that handles early initialization of a cloud instance.
+- openstack - Open source software for building private and public clouds.
+- pyinfra - A versatile CLI tools and python libraries to automate infrastructure.
+- saltstack - Infrastructure automation and management system.
+- Deployment
+- Monitoring and Processes
+- psutil - A cross-platform process and system utilities module.
+- sentry-python - Sentry SDK for Python.
+- sh - A full-fledged subprocess replacement for Python.
+- supervisor - Supervisor process control system for UNIX.
+- Other
+- borg - A deduplicating archiver with compression and encryption.
+- chaostoolkit - A Chaos Engineering toolkit & Orchestration for Developers.
+- pre-commit - A framework for managing and maintaining multi-language pre-commit hooks.
+Frameworks and libraries for Distributed Computing.
+- Batch Processing
+- dask - A flexible parallel computing library for analytic computing.
+- luigi - A module that helps you build complex pipelines of batch jobs.
+- mpi4py - Python bindings for MPI.
+- pyspark - Apache Spark Python API.
+- joblib - A set of tools to provide lightweight pipelining in Python.
+- ray - A system for parallel and distributed Python that unifies the machine learning ecosystem.
+Libraries for working with task queues.
+- celery - An asynchronous task queue/job queue based on distributed message passing.
+- dramatiq - A fast and reliable background task processing library for Python 3.
+- huey - Little multi-threaded task queue.
+- rq - Simple job queues for Python.
+Libraries for working with message brokers and event streaming.
+- faststream - A framework for building asynchronous services over Apache Kafka, RabbitMQ, NATS, MQTT and Redis.
+Libraries for scheduling jobs.
+- airflow - Airflow is a platform to programmatically author, schedule and monitor workflows.
+- apscheduler - A light but powerful in-process task scheduler that lets you schedule functions.
+- dagster - An orchestration platform for the development, production, and observation of data assets.
+- prefect - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
+- schedule - Python job scheduling for humans.
+- SpiffWorkflow - A powerful workflow engine implemented in pure Python.
+Libraries for generating and working with logs.
+- logfmter - A standard library compatible logfmt formatter.
+- logging - (Python standard library) Logging facility for Python.
+- loguru - Library which aims to bring enjoyable logging in Python.
+- structlog - Structured logging made easy.
+Tools and libraries for Virtual Networking and SDN (Software Defined Networking).
+- mininet - A popular network emulator and API written in Python.
+- napalm - Cross-vendor API to manipulate network devices.
+- scapy - A brilliant packet manipulation library.
+CLI & GUI
+Libraries for building command-line applications.
+- CLI Development
+- argparse - (Python standard library) Command-line option and argument parsing.
+- cement - CLI Application Framework for Python.
+- click - A package for creating beautiful command line interfaces in a composable way.
+- python-fire - A library for creating command line interfaces from absolutely any Python object.
+- python-prompt-toolkit - A library for building powerful interactive command lines.
+- typer - Modern CLI framework that uses Python type hints. Built on Click and Pydantic.
+- Terminal Rendering
+- alive-progress - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
+- asciimatics - A package to create full-screen text UIs (from interactive forms to ASCII animations).
+- colorama - Cross-platform colored terminal text.
+- rich - Python library for rich text and beautiful formatting in the terminal. Also provides a great
+RichHandler
+log handler. - textual - A framework for building interactive user interfaces that run in the terminal and the browser.
+- tqdm - Fast, extensible progress bar for loops and CLI.
+Useful CLI-based tools for productivity.
+- Productivity Tools
+- cookiecutter - A command-line utility that creates projects from cookiecutters (project templates).
+- copier - A library and command-line utility for rendering projects templates.
+- doitlive - A tool for live presentations in the terminal.
+- thefuck - Correcting your previous console command.
+- tmuxp - A tmux session manager.
+- xonsh - A Python-powered shell. Full-featured and cross-platform.
+- yt-dlp - A command-line program to download videos from YouTube and other video sites, a fork of youtube-dl.
+- CLI Enhancements
+- httpie - A command line HTTP client, a user-friendly cURL replacement.
+- iredis - Redis CLI with autocompletion and syntax highlighting.
+- litecli - SQLite CLI with autocompletion and syntax highlighting.
+- mycli - MySQL CLI with autocompletion and syntax highlighting.
+- pgcli - PostgreSQL CLI with autocompletion and syntax highlighting.
+Libraries for working with graphical user interface applications.
+- Desktop
+- customtkinter - A modern and customizable python UI-library based on Tkinter.
+- dearpygui - A Simple GPU accelerated Python GUI framework
+- enaml - Creating beautiful user-interfaces with Declarative Syntax like QML.
+- kivy - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
+- pyglet - A cross-platform windowing and multimedia library for Python.
+- pygobject - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
+- PyQt - Python bindings for the Qt cross-platform application and UI framework.
+- pyside - Qt for Python offers the official Python bindings for Qt, this is same as PyQt but it's the official binding with different licensing.
+- tkinter - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
+- toga - A Python native, OS native GUI toolkit.
+- wxPython - A blending of the wxWidgets C++ class library with the Python.
+- Web-based
+- Terminal
+- Wrappers
+- gooey - Turn command line programs into a full GUI application with one line.
+Text & Documents
+Libraries for parsing and manipulating plain texts.
+- General
+- babel - An internationalization library for Python.
+- chardet - Python 2/3 compatible character encoding detector.
+- difflib - (Python standard library) Helpers for computing deltas.
+- ftfy - Makes Unicode text less broken and more consistent automagically.
+- pangu.py - Paranoid text spacing.
+- pyfiglet - An implementation of figlet written in Python.
+- pypinyin - Convert Chinese hanzi (漢字) to pinyin (拼音).
+- python-slugify - A Python slugify library that translates unicode to ASCII.
+- textdistance - Compute distance between sequences with 30+ algorithms.
+- unidecode - ASCII transliterations of Unicode text.
+- Unique identifiers
+- Parser
+- pygments - A generic syntax highlighter.
+- pyparsing - A general purpose framework for generating parsers.
+- python-nameparser - Parsing human names into their individual components.
+- python-phonenumbers - Parsing, formatting, storing and validating international phone numbers.
+- python-user-agents - Browser user agent parser.
+- sqlparse - A non-validating SQL parser.
+Libraries for working with HTML and XML.
+- beautifulsoup - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
+- justhtml - A pure Python HTML5 parser that just works.
+- lxml - A very fast, easy-to-use and versatile library for handling HTML and XML.
+- markupsafe - Implements a XML/HTML/XHTML Markup safe string for Python.
+- pyquery - A jQuery-like library for parsing HTML.
+- tinycss2 - A low-level CSS parser and generator written in Python.
+- xmltodict - Working with XML feel like you are working with JSON.
+Libraries for parsing and manipulating specific text formats.
+- General
+- docling - Library for converting documents into structured data.
+- kreuzberg - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
+- pyelftools - Parsing and analyzing ELF files and DWARF debugging information.
+- tablib - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+- MS Office
+- docxtpl - Editing a docx document by jinja2 template
+- openpyxl - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
+- pyexcel - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
+- python-docx - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
+- python-pptx - Python library for creating and updating PowerPoint (.pptx) files.
+- xlsxwriter - A Python module for creating Excel .xlsx files.
+- xlwings - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
+- PDF
+- pdf_oxide - A fast PDF library for text extraction, image extraction, and markdown conversion, powered by Rust.
+- pdfminer.six - Pdfminer.six is a community maintained fork of the original PDFMiner.
+- pikepdf - A powerful library for reading and editing PDF files, based on qpdf.
+- pypdf - A library capable of splitting, merging, cropping, and transforming PDF pages.
+- reportlab - Allowing Rapid creation of rich PDF documents.
+- weasyprint - A visual rendering engine for HTML and CSS that can export to PDF.
+- Markdown
+- markdown-it-py - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
+- markdown - A Python implementation of John Gruber’s Markdown.
+- markitdown - Python tool for converting files and office documents to Markdown.
+- mistune - Fastest and full featured pure Python parsers of Markdown.
+- Data Formats
+Libraries for file manipulation.
+- mimetypes - (Python standard library) Map filenames to MIME types.
+- pathlib - (Python standard library) A cross-platform, object-oriented path library.
+- python-magic - A Python interface to the libmagic file type identification library.
+- watchdog - API and shell utilities to monitor file system events.
+- watchfiles - Simple, modern and fast file watching and code reload in python.
+Media
+Libraries for manipulating images.
+- pillow - Pillow is the friendly PIL fork.
+- pymatting - A library for alpha matting.
+- python-barcode - Create barcodes in Python with no extra dependencies.
+- python-qrcode - A pure Python QR Code generator.
+- pyvips - A fast image processing library with low memory needs.
+- scikit-image - A Python library for (scientific) image processing.
+- thumbor - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
+- wand - Python bindings for MagickWand, C API for ImageMagick.
+Libraries for manipulating audio, video, and their metadata.
+- Audio
+- gtts - Python library and CLI tool for converting text to speech using Google Translate TTS.
+- librosa - Python library for audio and music analysis.
+- matchering - A library for automated reference audio mastering.
+- pydub - Manipulate audio with a simple and easy high level interface.
+- Video
+- Metadata
+- beets - A music library manager and MusicBrainz tagger.
+- mutagen - A Python module to handle audio metadata.
+- tinytag - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
+Awesome game development libraries.
+- arcade - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
+- panda3d - 3D game engine developed by Disney.
+- py-sdl2 - A ctypes based wrapper for the SDL2 library.
+- pygame - Pygame is a set of Python modules designed for writing games.
+- pyopengl - Python ctypes bindings for OpenGL and it's related APIs.
+- renpy - A Visual Novel engine.
+Python Language
+Implementations of Python.
+- cpython - Default, most widely used implementation of the Python programming language written in C.
+- cython - Optimizing Static Compiler for Python.
+- ironpython - Implementation of the Python programming language written in C#.
+- micropython - A lean and efficient Python programming language implementation.
+- pyodide - Python distribution for the browser and Node.js based on WebAssembly.
+- pypy - A very fast and compliant implementation of the Python language.
+Libraries for enhancing Python built-in classes.
+- attrs - Replacement for
+__init__
+,__eq__
+,__repr__
+, etc. boilerplate in class definitions. - bidict - Efficient, Pythonic bidirectional map data structures and related functionality.
+- box - Python dictionaries with advanced dot notation access.
+Functional Programming with Python.
+- coconut - A variant of Python built for simple, elegant, Pythonic functional programming.
+- functools - (Python standard library) Higher-order functions and operations on callable objects.
+- funcy - A fancy and practical functional tools.
+- more-itertools - More routines for operating on iterables, beyond
+itertools
+. - returns - A set of type-safe monads, transformers, and composition utilities.
+- toolz - A collection of functional utilities for iterators, functions, and dictionaries. Also available as cytoolz for Cython-accelerated performance.
+Libraries for asynchronous, concurrent and parallel execution. Also see awesome-asyncio.
+- anyio - A high-level async concurrency and networking framework that works on top of asyncio or trio.
+- asyncio - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
+- concurrent.futures - (Python standard library) A high-level interface for asynchronously executing callables.
+- gevent - A coroutine-based Python networking library that uses greenlet.
+- multiprocessing - (Python standard library) Process-based parallelism.
+- trio - A friendly library for async concurrency and I/O.
+- twisted - An event-driven networking engine.
+- uvloop - Ultra fast asyncio event loop.
+Libraries for working with dates and times.
+- dateparser - A Python parser for human-readable dates in dozens of languages.
+- dateutil - Extensions to the standard Python datetime module.
+- pendulum - Python datetimes made easy.
+- zoneinfo - (Python standard library) IANA time zone support. Brings the tz database into Python.
+Python Toolchain
+Libraries for Python version and virtual environment management.
+- KillPy - Analyze, detect, and clean unused Python environments and pipx packages.
+- pyenv - Simple Python version management.
+- pyenv-win - Pyenv for Windows.
+- uv - An extremely fast Python version, package and project manager, written in Rust.
+- virtualenv - A tool to create isolated Python environments.
+Libraries for package and dependency management.
+- conda - Cross-platform, Python-agnostic binary package manager.
+- pip - The package installer for Python.
+- pipx - Install and Run Python Applications in Isolated Environments. Like
+npx
+in Node.js. - poetry - Python dependency management and packaging made easy.
+- uv - An extremely fast Python version, package and project manager, written in Rust.
+Local PyPI repository server and proxies.
+- bandersnatch - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
+- devpi - PyPI server and packaging/testing/release tool.
+- warehouse - Next generation Python Package Repository (PyPI).
+Libraries to create packaged executables for release distribution.
+- cx-Freeze - It is a Python tool that converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
+- Nuitka - Compiles Python programs into high-performance standalone executables (cross-platform, supports all Python versions).
+- pyarmor - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
+- pyinstaller - Converts Python programs into stand-alone executables (cross-platform).
+- shiv - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.
+Libraries for storing and parsing configuration options.
+- configparser - (Python standard library) INI file parser.
+- dynaconf - Dynaconf is a configuration manager with plugins for Django, Flask and FastAPI.
+- hydra - Hydra is a framework for elegantly configuring complex applications.
+- python-decouple - Strict separation of settings from code.
+- python-dotenv - Reads key-value pairs from a
+.env
+file and sets them as environment variables.
+Security
+- cryptography - A package designed to expose cryptographic primitives and recipes to Python developers.
+- paramiko - The leading native Python SSHv2 protocol library.
+- pynacl - Python binding to the Networking and Cryptography (NaCl) library.
+Frameworks and tools for penetration testing.
+- mitmproxy - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
+- setoolkit - A toolkit for social engineering.
+- sherlock - Hunt down social media accounts by username across social networks.
+- sqlmap - Automatic SQL injection and database takeover tool.
+Libraries for application-layer web security.
+- secure - HTTP security headers for Python web applications with ASGI and WSGI middleware.
+Miscellaneous
+Libraries for programming with hardware.
+- bleak - A cross platform Bluetooth Low Energy Client for Python using asyncio.
+- pynput - A library to control and monitor input devices.
+Python programming on Microsoft Windows.
+- pythonnet - Python Integration with the .NET Common Language Runtime (CLR).
+- pywin32 - Python Extensions for Windows.
+- winpython - Portable development environment for Windows 10/11.
+Useful libraries or tools that don't fit in the categories above.
+- blinker - A fast Python in-process signal/event dispatching system.
+- boltons - A set of pure-Python utilities.
+- itsdangerous - Various helpers to pass trusted data to untrusted environments.
+- tryton - A general-purpose business framework.
+Where to discover learning resources or new Python libraries.
+- Python Developer Tooling Handbook - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
+Your contributions are always welcome! Please take a look at the contribution guidelines first.
+If you have any question about this opinionated list, do not hesitate to contact @vinta on X (Twitter).",,success
+python libraries,"Best Python Libraries for Data Science, Machine Learning ...","In this article, we'll discuss the top Python libraries for different use cases and how to choose the right ones for your projects.",Anaconda,"Nov 6, 2024",https://www.anaconda.com/topics/best-python-libraries,article,"Introduction
+Python has grown to become one of the most popular programming languages because of its versatility for a wide range of tasks, from data manipulation and analysis to machine learning and web development. Along with its flexibility and simple syntax, Python has a large ecosystem of libraries and frameworks that simplify complex tasks and facilitate rapid development.
+Although the Python Standard Library provides a lot of native functionality out of the box, it’s easy to install additional open-source packages to extend Python’s capabilities. This means data scientists can choose from hundreds of libraries from a centralized package repository to make their workflows more efficient.
+In this article, we’ll discuss the top Python libraries for different use cases and how to choose the right ones for your projects.
+Understanding Your Needs
+Since there are so many open-source Python packages available, it’s important to evaluate your project requirements before selecting a library. The features, ease of use, and scalability of a particular library can impact the success of your data science or machine learning project.
+Here are some key questions to ask when choosing a library:
+- What type of data will I be working with? Numerical, text, images?
+- What tasks do I need to accomplish? Data analysis, visualization, machine learning?
+- What is my skill level with Python and specific libraries?
+- Will the library meet the performance requirements of my project?
+- Is this the latest version of the library?
+- What are the dependencies for the latest version of the library?
+Popular Python Libraries by Category
+Python is the best language for data science and machine learning because it boasts a vast ecosystem of libraries and frameworks specifically designed for certain types of projects. Here are some of the most popular Python libraries to consider.
+Data Analysis and Manipulation
+Analyzing and manipulating data is crucial for most data science and machine learning workflows. This requires capabilities to handle different data structures depending on the size and format of a particular data set.
+A Python library like NumPy can provide powerful array and mathematical operations functionality, and pandas can offer additional data structures as well. Other options include Dask for handling large datasets and the comprehensive ecosystem of PyData libraries for other data requirements.
+Data Visualization
+Data visualization is important for clearly conveying the insights from data science projects to stakeholders. Different Python libraries enable data scientists to create unique visualizations suitable for specific datasets.
+Matplotlib provides versatile plot types and customization options for data visualization, and Seaborn extends the library with additional statistical graphics. Plotly and Bokeh are both ideal for interactive, web-based visualizations, while Altair is suitable for declarative visualizations.
+Machine Learning
+Machine learning is a field focused on building models that learn from training datasets and then make predictions based on new data. This requires capabilities for creating and training models based on different algorithms as well as deploying them into production.
+Scikit-learn offers a wide range of machine learning algorithms, while TensorFlow and PyTorch are more focused on deep learning and neural networks. XGBoost and LightGBM are additional library options for gradient boosting, which is a method for combining weaker ML models to achieve better performance.
+Natural Language Processing
+Natural language processing (NLP) is a subset of machine learning that focuses on understanding and generating human language. This requires features for applying computational linguistics to large datasets.
+NLTK is a text processing toolkit with a comprehensive suite of libraries for classification, tokenization, stemming, tagging, parsing, semantic reasoning, wrappers for industrial-strength NLP libraries, and more. In addition, spaCy is an industrial-strength NLP for real-world use cases, while Textblob can handle NLP simpler tasks. Some data scientists also use Gensim for a text-mining technique called topic modeling.
+Choosing the Right Python Library for Data Science
+Every data science project is different, so it’s crucial to evaluate every library you adopt based on your unique needs. The right choice can streamline your data science workflow, enhance productivity, and ensure that your project meets its objectives.
+Here are some key considerations when choosing a library:
+- Features: Does the library offer the necessary functionality?
+- Ease of use: Is the learning curve suitable for beginners?
+- Performance: Can the library scale to handle large datasets?
+- Community: Is there an active user base with resources and support available?
+- Ecosystem: Is the library compatible with other dependencies in your project?
+It’s important to note that some projects may require multiple libraries to cover all requirements. General purpose libraries can handle the basic tasks, while more specialized libraries offer advanced functionality for data analysis, machine learning, scientific computing, and more. That’s why it’s also crucial to understand how to manage multiple Python project dependencies and ensure compatibility.
+Best Practices for Managing Python Libraries
+Although Python’s vast ecosystem of libraries is invaluable, library management can sometimes become complicated for large projects. This means handling Python dependencies effectively is essential for streamlining data science and machine learning workflows.
+Virtual environments are a great way to isolate project-specific dependencies to simplify library management. This isolation helps to avoid conflicts where multiple projects rely on different versions of the same library. These virtual environments and their configurations can also be replicated across different machines to ensure consistency.
+Package managers like pip and conda help with installing, updating, and managing dependencies, and can also check for compatibility between different tools and libraries. This eliminates much of the frustrating work of managing multiple versions of libraries and resolving dependency conflicts.
+In addition to package managers and virtual environments, proper library organization is crucial for maintainability. Data scientist teams should establish a standardized method for structuring libraries that’s easy to understand. This includes providing clear documentation to help other data scientists understand the purpose and functionality of certain libraries. There is also a need for reproducibility when working across teams and iterating projects
+Besides focusing on library compatibility, it’s also important to keep libraries updated to maintain security and performance. Outdated libraries can introduce vulnerabilities or degrade performance, so regular library updates are a key open-source security best practice.mputing, and more. That’s why it’s also crucial to understand how to manage multiple Python project dependencies and ensure compatibility.
+Getting Started on Your Python Project
+While Python and its ecosystem prioritize flexibility and readability, large data science projects can still become complicated to manage. Using a comprehensive platform like Anaconda streamlines library management and creates isolated environments for different projects.
+Anaconda is a powerful platform for data science and machine learning. It provides a vast collection of pre-installed libraries, a robust package manager, and efficient environment management capabilities. The platform comes with many popular data manipulation, analysis, visualization, and ML libraries so that users can get started immediately.
+Additionally, Anaconda has a built-in package manager called conda, which makes it easy to install, update, and manage Python libraries commonly used for different use cases. The platform also allows users to create isolated environments, each with its own set of libraries. These capabilities simplify the process of setting up and maintaining environments for different projects without running into dependency conflicts.
+The large and active Anaconda community also contributes to the development and maintenance of numerous open-source libraries. This fosters a rich ecosystem that can complement the best practices we’ve covered for selecting and managing Python libraries to ensure the success of your projects.
+Request a demo to see if Anaconda is right for your data science and machine learning projects. Or, if you’re curious to experiment with Anaconda on your own, you can get started for free.",,success
+major libraries,List of the world's largest libraries,This sortable list of the world's largest libraries includes libraries that (as of 2008) store 10 million or more items. All figures are based on data ...,Wikipedia,,https://en.wikipedia.org/wiki/List_of_the_world%27s_largest_libraries,article,"List of the world's largest libraries
+Appearance
+This sortable list of the world's largest libraries includes libraries that (as of 2008[update]) store 10 million or more items. All figures are based on data published by the libraries themselves. As there are no universally accepted standards for measuring stock, libraries may have counted their holdings in different ways, and the figures given may not be directly comparable.
+List
+[edit]See also
+[edit]- List of largest libraries in Italy (in Italian)
+- List of largest libraries in Russia (in Russian)
+- List of largest libraries in the United States
+References
+[edit]- ^ ""British Library at Boston Spa"". bl.uk. Archived from the original on 9 August 2019. Retrieved 26 June 2019.
+- ^ ""A few of our favourite things about the British Library"". bl.uk. 17 August 2023. Archived from the original on 10 August 2025.
+- ^ ""BL Accounts 2019"" (PDF). bl.uk. Archived (PDF) from the original on 22 July 2019. Retrieved 23 July 2019.
+- ^ ""BL Exhibition Notes"". bl.uk. Archived from the original on 9 August 2019. Retrieved 11 June 2018.
+- ^ ""The British Library Annual Report and Accounts 2008/09 – Performance"". 2009. Archived from the original on 27 September 2011. Retrieved 14 July 2010.
+- ^ a b ""The British Library Annual Accounts 2008/09"" (PDF). 2009. Archived from [WEB_ACCESSIBLE_British_Library_Annual_Report_and_Accounts_FY_2024_25.pdf the original] (PDF) on 27 September 2011. Retrieved 15 July 2010.
+{{cite web}}
+: Check|url=
+value (help) - ^ ""General information"". Library of Congress. Archived from the original on 28 February 2014. Retrieved 5 May 2020.
+- ^ a b c ""General Information – About the Library (Library of Congress)"". Library of Congress. Archived from the original on 28 February 2014. Retrieved 15 May 2020.
+- ^ ""About the Library"". 4 August 2025. Retrieved 4 August 2025.
+- ^ ""Approximately 2 million people visited the Presidential Nation's Library last year"". 2025. Retrieved 4 August 2025.
+- ^ ""2023 in Figures. Brief Statistical Reference"" (PDF). Russian State Library. Archived from the original (PDF) on 18 June 2024. Retrieved 18 June 2024.
+- ^ a b c ""Статистическая справка о работе Российской государственной библиотеки (2021 год) (по состоянию на 01.01.2022)"" (PDF). 1 January 2020. Archived (PDF) from the original on 19 March 2022. Retrieved 11 April 2020.
+- ^ ""关于上图 – 上海图书馆"". Shanghai Library. Retrieved 9 September 2024.
+- ^ ""About The New York Public Library"". The New York Public Library. Retrieved 14 June 2025.
+- ^ a b c d ""The New York Public Library's 2009 Annual Report"" (PDF). 2009. Archived from the original (PDF) on 26 March 2014. Retrieved 15 July 2010.
+- ^ ""馆藏一览"". 中国国家图书馆 National Library of China. Retrieved 9 September 2024.
+- ^ a b ""ANNUAL REPORT TO CDNL 2010"" (PDF). 2009. Archived from the original (PDF) on 19 January 2013. Retrieved 14 July 2010.
+- ^ a b c d ""National Diet Library Statistics"". 2017. Archived from the original on 7 July 2014. Retrieved 6 April 2017.
+- ^ a b c d ""Jahresbericht 2021"" (in German). Deutsche Nationalbibliothek. 2022. Archived from the original on 11 October 2022. Retrieved 11 October 2022.
+- ^ a b c ""Årsrapport 2017 for Det Kgl. Bibliotek"" (PDF) (in Danish). Det Kgl. Bibliotek. 5 March 2018. Archived (PDF) from the original on 16 June 2020. Retrieved 5 April 2020.
+- ^ ""Job og karriere"" (in Danish). Det Kgl. Bibliotek. Archived from the original on 13 March 2021. Retrieved 5 April 2020.
+- ^ ""La BnF en chiffes"". 31 December 2022. Archived from the original on 9 December 2011. Retrieved 4 March 2024.
+- ^ ""Nouveau record de fréquentation pour la BnF"" (PDF) (in French). 2 January 2026. Retrieved 18 February 2026.
+- ^ ""BnF – La BnF en chiffres – Budget"" (in French). 14 October 2009. Retrieved 14 July 2010.
+- ^ ""BnF – La BnF en chiffres – Personnels"" (in French). 23 December 2010. Archived from the original on 9 November 2012. Retrieved 28 September 2012.
+- ^ a b c d ""Facts and Figures – UC Libraries"". Archived from the original on 1 December 2022. Retrieved 14 July 2023.
+- ^ ""Libraries & Hours | University Library | Illinois"". www.library.illinois.edu. Retrieved 19 March 2026.
+- ^ ""Collections – University of Illinois Library"". www.library.illinois.edu. Archived from the original on 17 October 2022. Retrieved 17 October 2022.
+- ^ ""Budget Summary for Operations FY2023"". Office of Business and Financial Services University of Illinois System. p. 22. Archived from the original on 17 October 2022. Retrieved 16 October 2022.
+- ^ a b ""Российская национальная библиотека: Статистические данные за 2005 – 2009 гг"". 2011. Retrieved 26 September 2012.
+{{cite web}}
+: CS1 maint: deprecated archival service (link) - ^ ""Biblioteca Nacional de España. Memoria 2015"" (PDF) (in Spanish). 2015. Archived from the original (PDF) on 23 December 2010. Retrieved 25 March 2017.
+- ^ a b ""Biblioteca Nacional de España. Memoria 2015"" (PDF) (in Spanish). 2015. Archived from the original (PDF) on 23 December 2010. Retrieved 25 March 2017.
+- ^ ""Единый фонд системы Библиотеки Российской Академии наук – главный информационный ресурс"". Archived from the original on 10 March 2012. Retrieved 14 July 2010.
+- ^ a b ""Zahlen und Fakten Staatsbibliothek zu Berlin"" (in German). 2009. Archived from the original on 20 June 2010. Retrieved 15 July 2010.
+- ^ ""Locations"". Boston Public Library. Retrieved 14 June 2025.
+- ^ ""The Boston Public Library. An Overview: 2010"" (PDF). 2010. Archived from the original (PDF) on 22 February 2012. Retrieved 15 July 2010.
+- ^ ""Facts and Figures"". bpl.org. Retrieved 2 April 2026.
+- ^ ""BPL – Community"". 9 March 2010. Archived from the original on 29 March 2012. Retrieved 15 July 2010.
+- ^ ""About the New York State Library"". 20 March 2010. Archived from the original on 2 April 2012. Retrieved 15 July 2010.
+- ^ ""Visitor Access | Harvard Library"". library.harvard.edu. Retrieved 19 March 2026.
+- ^ a b ""Harvard Library Annual Report FY2013"". 2013. Archived from the original on 9 June 2016. Retrieved 30 May 2016.
+- ^ ""Our Collections – Kungliga biblioteket"". Archived from the original on 25 December 2018. Retrieved 10 February 2013.
+- ^ ""Kungl. bibliotekets årsredovisning 2015"" (PDF). National Library of Sweden (in Swedish). Archived from the original (PDF) on 26 October 2016. Retrieved 1 October 2016.
+- ^ ""Alumni, Guests, and Native and Indigenous Peoples Borrowing | University of Michigan Library"". www.lib.umich.edu. Retrieved 19 September 2025.
+- ^ ""Statistical Highlights"". 2022. Archived from the original on 29 January 2022. Retrieved 1 September 2022.
+- ^ ""Library membership services - Services | University of Toronto Libraries"". library.utoronto.ca. Retrieved 19 March 2026.
+- ^ ""LibQUAL comments | University of Toronto Libraries"". onesearch.library.utoronto.ca. Retrieved 13 April 2024.
+- ^ University of Toronto (16 February 2023). ""Budget Report 2023-24 and Long-Range Budget Guidelines 2023-24 to 2027-28"" (PDF).
+- ^ a b c ""Історичні відомості. Національна бібліотека України імені В. І. Вернадського"". Archived from the original on 4 March 2012. Retrieved 22 January 2019.
+- ^ ""Про Державний бюджет України на 2010 рік| від 27 April 2010 № 2154-VI (Стор. 16 з 28)"" (in Ukrainian). 17 June 2010. Archived from the original on 6 December 2019. Retrieved 14 July 2010.
+- ^ ""Visit and Study | Yale Library"". library.yale.edu. Retrieved 19 March 2026.
+- ^ ""Yale University Library FAQ FY2017"". 2017. Archived from the original on 8 June 2019. Retrieved 16 April 2018.
+- ^ ""National Library of Iran"". Archived from the original on 1 March 2022. Retrieved 29 November 2021.
+- ^ a b ""About the University of Chicago Library"". www.lib.uchicago.edu. Retrieved 24 June 2025.
+- ^ ""History of the Bodleian"". visit.bodleian.ox.ac.uk. Retrieved 31 December 2025.
+- ^ a b c Bodleian Communications (2024). ""Bodleian Libraries Annual Report 2022-2023"" (PDF). Bodleian.ox.ac.uk. Retrieved 31 December 2025.
+{{cite web}}
+: CS1 maint: url-status (link) - ^ ""Oxford University attractions welcomed over 3.5 million visitors in 2024"". www.glam.ox.ac.uk. Retrieved 31 December 2025.
+- ^ ""Cultural services"". Annual Report 2012-13. Leisure and Cultural Services Department. Retrieved 1 February 2014.
+- ^ p. 200, ""Head 95 - Leisure and Cultural Services Department"" (PDF). 2011–12 Budget. John Tsang. Retrieved 2 June 2011.
+- ^ ""Sprawozdanie biblioteki narodowej za rok 2024"" (PDF) (in Polish). Warsaw: Biblioteka Narodowa. 2025. p. 24.
+- ^ ""Sprawozdanie biblioteki narodowej za rok 2024"" (PDF) (in Polish). Warsaw: Biblioteka Narodowa. 2025. p. 50.
+- ^ ""Sprawozdanie biblioteki narodowej za rok 2024"" (PDF) (in Polish). Warsaw: Biblioteka Narodowa. 2025. p. 137.
+- ^ a b c ""About the Library"". TPL: Toronto Public Library. Retrieved 27 June 2025.
+- ^ ""Library Finance"". TPL: Toronto Public Library. Archived from the original on 28 May 2025. Retrieved 27 June 2025.
+- ^ ""TPL Workforce Overview"" (PDF). torontopubliclibrary.typepad.com. 24 June 2024. Retrieved 27 June 2025.",,success
+major libraries,The Nation's Largest Libraries: A Listing by Volumes Held,"Number, Source, Library Name, Volumes Held. 1, L, Library of Congress, 39,290,248. 2, A + P, New York Public Library, 36,251,074.",ALA LibGuides,"Feb 21, 2025",https://libguides.ala.org/librarystatistics/volumesheld,article,"The Nation's Largest Libraries by Volumes Held
+L = Library of Congress Annual Report, Fiscal Year 2017
+A = Association of Research Libraries (ARL) Statistics, 2015-2016
+P = Public Libraries Survey, FY 2016
+Note: The Boston Public Library and New York Public Library function both as public libraries and as research libraries. Thus they appear on both the Public Libraries Survey and the ARL Statistics report, reporting their public library collection number in the former and their research library collection number in the latter. For accuracy in counting these institution's true holdings, these collection numbers have been added together.",,success
+major libraries,50 Largest College Libraries for Your Next University,"Top 50 Largest College Libraries · 1. Harvard University (Cambridge, MA): 16,832,952 · 2. University of Illinois Urbana–Champaign (Champaign, IL): 13,158,748.",CollegeXpress,,https://www.collegexpress.com/lists/list/top-50-largest-college-libraries/747/,article,"* Green ""Yes, connect me!"" buttons indicate a featured school
+Source: American Library Association, 2012
+When choosing a college, a strong academic library is a powerful asset that goes far beyond a quiet study space. It is the heart of a university’s intellectual life, a hub of knowledge, and a crucial resource for success. The colleges on this list are home to some of the largest academic libraries in the United States, offering an incredible wealth of resources that can elevate your education and research.
+While having millions of books is impressive, a modern library is much more than just a collection of printed volumes. These monumental institutions are equipped with state-of-the-art technology, including extensive digital archives, rare manuscript collections, and automated storage and retrieval systems that can deliver a book to your hands in minutes. They also feature collaborative study rooms, cafes, and specialized labs for everything from digital media to preservation.
+Schools like Harvard University, Yale University, and the University of Illinois at Urbana-Champaign lead the way with their vast collections and commitment to providing unparalleled research support. These libraries serve as powerful tools for students, giving them a distinct advantage in their coursework, thesis projects, and future careers. Whether you are conducting in-depth research for a dissertation, exploring primary sources for a paper, or simply looking for a place to get work done, a large, well-funded library can make all the difference.
+The schools on this list recognize that the library is not a relic of the past but a dynamic, evolving center for learning. By choosing a college with one of the largest libraries, you are ensuring that you will have access to a world-class collection of information and a supportive environment that fosters discovery and academic excellence.
+List produced by the Experts . Want more information on how this list was compiled? Find out more about where our Lists & Rankings come from.
+College Quick Connect
+Swipe right to request information.
+Swipe left if you're not interested.
+Hamden, CT
+CollegeXpress has everything you need to simplify your college search, get connected to schools, and find your perfect fit.
+Join CollegeXpressLog in to be directly connected to
+Provide your information below to connect with",,success
+major libraries,Best Libraries in the World - Ranking The Top 35,"The Best Libraries In The World · 1. Library of Congress — Washington D.C., USA · 2. Bodleian Library — Oxford, United Kingdom · 3. Reading Room ...",TheBestColleges.org,"Jul 22, 2020",https://www.thebestcolleges.org/amazing-libraries/,article,"With education as our focus here at The Best Colleges, we obviously love libraries. College libraries, public libraries, private libraries — whatever and wherever they are, we love them all. For those of you not ""of a certain age,"" a library is a quiet building that houses tons of books and reference materials, typically dating back to Ye Olde Pre-Internet Times. We may not be as reliant on brick-and-mortar libraries anymore, but even in the digital era, we had no trouble finding dozens of architecturally interesting libraries and libraries with interesting collections, as well as many that are actually fascinating in both respects. We'd love to spend a day in any of these libraries catching up on our reading and enjoying the sanctuary-esque vibes. The following 35 are libraries that we thought deserved a closer look — we hope you'll agree!
+1. Library of Congress — Washington D.C., USA
+The Library of Congress in Washington DC is essentially both the national library of the U.S. and the country's oldest federal cultural institution. Though it consists of only three buildings, it is the largest library in the world for shelf space and number of volumes. While open to the public for on-site research and as a tourist attraction, as the research institution of Congress, only members of Congress, Supreme Court justices, and other specified government officials can check out books. The library is formally known as the ""library of last resort"" in the U.S., charged with making certain items available to other national libraries if all other means have been exhausted. The library's holdings are vast, including more than 32 million books, more than 61 million manuscripts, a rough draft of the Declaration of Independence, one of only four perfect vellum copies of the Gutenberg Bible in the world, over one million newspapers from the last three centuries, over five million maps, six million pieces of sheet music, and more than 14 millions photos and prints.
+2. Bodleian Library — Oxford, United Kingdom
+Established in 1602 as Oxford University's library, Bodleian is one of the oldest libraries in Europe. The library houses more than 11 million items, including many of historical importance: four copies of the Magna Carta, a Gutenberg Bible, and Shakespeare's First Folio (from 1623), just to name a few. Though Bodleian comprises multiple buildings, perhaps the most visually interesting is Radcliffe Camera, built in 1737-1749 to house the Radcliffe Science Library. The earliest circular library in England, Radcliffe has outlasted its 15 minutes of fame by appearing in multiple films, including Young Sherlock Holmes, The Saint, The Red Violin, and The Golden Compass.
+3. Reading Room at the British Museum — London, England
+The Reading Room at the British Museum is located in the center of the Museum's Great Court. The building's domed exterior protects a unique interior ceiling made of a special kind of papier-mache, which is another first on our list! For much of the Room's history, access was limited to registered researchers, attracting notable visitors including Karl Marx, Oscar Wilde, Mahatma Gandhi, Rudyard Kipling, George Orwell, Mark Twain, Lenin, and H.G. Wells during this time. The majority of the collection was moved to the new British Library in 2000; the Reading Room now houses an information center and a curated collection of specialty art and history titles relevant to the collections of the British Museum. The Reading Room has also been known to host long-running temporary exhibitions of its own, such as the 2006 exhibit centered on China's famous Terracotta Army.
+4. Yale University Beinecke Rare Book and Manuscript Library — New Haven, Connecticut, USA
+The Yale University Beinecke Rare Book and Manuscript Library holds the distinction of being the largest building in the world that serves the express purpose of preserving rare books and manuscripts, which alone undoubtedly makes it one of the best libraries in the world. The library's impressive holdings celebrate significant authors like Rudyard Kipling, D.H. Lawrence, Sinclair Lewis, and Joseph Conrad through its special collections. Beinecke's central shelving area includes glass walls and soft lighting to protect the works from direct light. Accessible to the public as a tourist attraction, the library's exhibition hall displays many of the library's rare works, including one of only 48 copies in existence of a treasured Gutenberg Bible.
+5. Vatican Library — Vatican City, Rome
+The Vatican Library, under the ecclesiastical jurisdiction of the Catholic Church in Rome, is one of the oldest libraries in the world. Though it was formally established in 1475, its existence in early forms dates back to the origins of the Catholic Church. For nearly 600 years, the library has added to its collection through historic acquisitions, generous bequests, and gracious gifts. The Vatican Library currently holds mor than 1.1 million books, 75,000 manuscripts, and over 8,500 incunabula. Fittingly, the library owns the oldest complete manuscript of the Bible, as well as many other significant works from medieval times.
+6. National Library of St. Mark's — Venice, Italy
+Fittingly housed in a Renaissance building in Venice, the National Library of St. Mark's contains one of the most important collections of classical texts in the world. Though its lengthy construction period would not begin until 1537, collecting for the library began as early as 1468 with a gift from Cardinal Bessarion of 250 manuscripts and 750 codices. As of 1603, a law was enacted that required one copy of all books printed in Venice to be housed at the National Library. Today, the collection encompasses more than a million books, over 13,000 manuscripts, 2,883 incunabula, and more than 24,000 16th-century works.
+7. Boston Public Library — Boston, Massachusetts, USA
+Established in 1848, Boston Public Library was the first publicly supported library in the United States and, with its present collection of 22 million items, also the second-largest. The Central Library consists of two buildings, the Johnson Building and the McKim Building, which houses the library's research collection and exhibitions. Built in 1895, McKim contains many beautiful murals, including Edward Abbey's famous scene depicting the legend of the Holy Grail. The main room of the McKim building — Bates Hall — also features a unique coffered ceiling. More than 1.7 million rarities are included in the research collection at McKim, including medieval manuscripts, incunabula, early Shakespeare that includes a First Folio, colonial Boston records, and a major Daniel Defoe collection. The collection is also home to the libraries of several notable figures in American history, including John Adams, William Lloyd Garrison, and Nathaniel Bowditch.
+8. Library of Parliament — Ottawa, Canada
+The Library of Parliament in Ottawa, Canada holds a special distinction on our list, as it is the only library of such prominence that its likeness is printed on the country's currency (it is featured on Canada's ten dollar bill). The design of this national landmark was inspired by the British Museum Reading Room, and includes walls supported by 16 flying buttresses, a vaulted ceiling in the main reading room, and white pine paneling with beautifully detailed carvings of flowers, masks, and mythical creatures. The collection encompasses more than 600,000 items, which is curated by a dedicated 300-member staff. While access to the facility is generally restricted to Canadian parliamentary business, tours are often made available to the public.
+9. New York Public Library — New York, New York, USA
+The New York Public Library is awe-inspiring for its scope and breadth. As the third largest library in North America with more than 50 million items in its collection, it encompasses 87 libraries serving 3.5 million people across the state. The Rose Main Reading Room acts as the centerpiece of the library, with grand arched windows along its 52-foot walls, and also featuring chandeliers and a gilded and painted ceiling. The library acquired America's first Gutenberg Bible, and also houses collections with a special emphasis on Americana literature and printed materials. Among the most recognizable sites on our list, the library has made multiple appearances in feature films, as a key setting in the film The Day After Tomorrow and as a prominent backdrop in the original Ghostbusters, among others.
+10. Thomas Fisher Rare Book Library — Toronto, Canada
+Affiliated with the University of Toronto, the Thomas Fisher Rare Book Library houses more rare books than any other collection in Canada. The collection includes unique artifacts like Newton's Principia (1687), Shakespeare's First Folio, the Nuremberg Chronicle (1493), and a Babylonian cuneiform tablet dating to 1789 BC. Robert S. Kenny, a Communist Party of Canada member, also donated a large part of the collection. In all, the rare book library includes more than 25,000 items with a special focus in labor movements worldwide, though with a particular emphasis on Canada and its history.
+11. Seattle Central Library — Seattle, Washington, USA
+Unmistakably modern in a beautiful glass and steel design created by architects Rem Koolhaas and Joshua Prince-Ramus, the Seattle Central Library opened in Washington's largest city in 2004. With their contemporary design, the architects aimed to create an inviting open and airy space, challenging the popular perception of libraries as dark and stuffy. The library was built with the capacity to accommodate more than 1.45 million books and mixed media materials. By 2008, the library had finally completed a ten-year ""Libraries for All"" initiative, which was aimed at expanding library access to a broader range of Washingtonians. It was the most expensive renovation of its kind in history, eventually totaling more than $290 million for the project.
+12. Abbey Library of Saint Gall — St. Gallen, Switzerland
+The Abbey Library of Saint Gall is the oldest library in Switzerland. The library's founder, Saint Othmar, is also credited with establishing an abbey of the same name in 719, known as one of the oldest monastery libraries in the world. Saint Gall is home to roughly 160,000 volumes, including manuscripts dating back to the 8th century. In 1983, the United Nations' Educational, Scientific, and Cultural Organization named the library a World Heritage site, calling it a ""a perfect example of a great Carolingian monastery"". The library offers online access to many of its holdings through an electronic database though, as a general rule, pre-1900 books can only be read on-site.
+13. Austrian National Library — Vienna, Austria
+Much like the Library of Congress in the U.S., the Austrian National Library is responsible for managing the collection of all publications that appear in Austria. Works of special prominence include the world's foremost Globe collection, rare books dating from the 4th century, a UNESCO Memory of the World Programme item (the Vienna Dioscurides, a 6th-century illuminated manuscript exploring medicine and healing), and a map collection that dates back to the 16th century. Originally housed in the Prunksaal, the library is currently located at Hofburg Palace and the baroque Palais Mollard-Clary, housing 7.4 million items within its comprehensive collection.
+14. National Library of Sweden — Stockholm, Sweden
+The National Library of Sweden is responsible for preserving all Swedish printed and A/V material. Since the 1500s, there has been some form of National Library in Sweden, made possible initially through purchases of collections from Swedish monasteries that were later destroyed in the Reformation and, later still, via war spoils from the Thirty Years War. To supplement its holdings, the library obtained the Library of Würzburg and the Royal Library of Prague during The Thirty Years War, as well as obtained a 13th-century copy of the ""Devil's Bible,"" which can be viewed online here. Today, Sweden's National Library holds more than 20 million objects.
+15. Library of the Benedictine Monastery — Admont, Austria
+The Library of the Benedictine Monastery is the largest monastery library in the world. The library holds 70,000 volumes, including 1,400 manuscripts and 900 incunables. Some items in the library's collection were gifted by Archbishop Gebhard, who founded the monastery in 1074. As part of an overall design inspired by the Enlightenment, the ceiling of the library is decorated with seven cupolas, highlighting elaborate frescoes by Bartolomeo Altomonte that display the progression of human knowledge.
+16. The Morgan Library & Museum — New York, New York, USA
+The Morgan Library & Museum was formed in 1906 to hold the private collection of banking magnate J.P. Morgan, including manuscripts, printed books, prints, and drawings. Items of special prominence in Morgan's collection include illuminated and original manuscripts, works by Sir Walter Scott and de Balzac, and drawings by masterful artists like Leonardo, Raphael, Picasso, Michelangelo, and Rembrandt. Interestingly, Morgan was apparently also drawn to unusual collectibles to add to his holdings, including scraps of paper written on by Bob Dylan for what would become ""Blowin' in the Wind,"" concept drawings for Antoine de Saint-Exupéry's The Little Prince and a Charles Dickens manuscript of A Christmas Carol.
+17. Jay Walker's Private Library — Ridgefield, Connecticut, USA
+While we didn't expect to find a privately owned library worthy of our list, let's just say it was a pleasant surprise to learn that American inventor and entrepreneur Jay Walker used his wealth to develop a comprehensive private library. Christened ""The Walker Library of the History of Human Imagination,"" the library located in Walker's Connecticut home has been called ""the most amazing library in the world"" by WIRED magazine as well as the subject of a TED Talk. The architecture incorporates a multi-level design inspired by the surreal works of M.C. Escher. It houses more than 50,000 books, including historic and museum-worthy manuscripts and publications. While the library is not open to the public, Walker has been known to host notable public figures at his home.
+18. Trinity College Library — Dublin, Ireland
+The Trinity College Library, fondly called the Long Room, is the largest library in Dublin, and responsible for many of the same functions for Ireland that the Library of Congress fulfills for the United States. Though the library actually consists of four separate buildings, the Old Library, built in 1592, is among Ireland's biggest tourist attractions, home to the historic Book of Kells, a Gospel book created by Celtic monks roughly around 800 AD. It is also home to six million other printed works, including manuscripts, music, journals, maps, and special collections.
+19. Danish Royal Library — Copenhagen, Denmark
+The Danish Royal Library is the national library of Denmark, founded in 1648 by King Frederik III. The library holds all works printed in Denmark since the 17th century and nearly every Danish book ever written, dating back to the first Danish book printed in 1482. The Danish Royal Library is the largest library among the Nordic countries. Many significant works, including the correspondence of Hans Christian Anderson and historical maps of the Polar Region, are held here. Holdings also include the Arnamagnæan Manuscript Collection, named for Icelandic scholar Arnas Magnæan, who dedicated much of his life collecting manuscripts from Iceland, Norway, Denmark, and Sweden until his death in 1730.
+20. Melk Monastery Library — Melk, Austria
+The formation in the 12th century of the Melk Monastery Library followed the founding of Melk Abbey and school of the same name around 1089. Word spread quickly, and the Melk Library became known as one of the largest manuscript holders in the world, also emerging as an authority in manuscript production. Today, the library's high ceilings, adorned with beautiful frescos painted by Paul Troger, guard what is still one of the world's biggest library when it comes to collections of medieval manuscripts, as well as a prominent collection of musical manuscripts.
+21. Strahov Monastery Library — Prague, Czech Republic
+Prague's Strahov Monastery Library is contained within the Strahov Monastery, founded in 1149. Segments of the library's interior include Theological Hall, built in 1679, and Philosophical Hall, completed in 1779. The monastery was transformed into the Museum of National Literature in 1950 after becoming occupied by the Communist government, though all was not lost; fortunately, the monastery and library were returned to the Premonstratensian order and the buildings restored when the Communist regime fell out of power in 1989. Today, it is one of the best libraries, holding more than 110,000 volumes, including over 1,200 incunabula.
+22. Salt Lake City Public Library — Salt Lake City, Utah, USA
+Constructed in 2003, the main location within Utah's Salt Lake City Public Library system is a unique building centered on a beautiful five-story curved glass wall and a 20,000-square-foot skylight, reinforcing the architect's commitment to incorporating natural lighting into the design scheme. The rooftop features spectacular views of Salt Lake City, and is adorned with landscaped gardens and grounds. With seven additional locations around Salt Lake City, the public library holds more than 500,000 books, e-books, and downloadable titles, as well as a large collection of zines and periodical publications.
+23. State Library of Victoria — Melbourne, Australia
+Founded in 1854, the State Library of Victoria now holds more than 1.5 million books, including special collections highlighting chess, the arts, the diaries of Melbourne's founders, and the folios of Captain James Cook. The centerpiece of the library is the LaTrobe Reading Room, a soaring octagonal space with the capacity to accommodate more than one million books and 500 researchers or readers in one sitting. At the time of its completion in 1913, the LaTrobe Reading Room was the largest dome in the world; today, it houses the library's extensive Australiana collection.
+24. Château de Chantilly Library — Chantilly, France
+Among few libraries in Europe to hold a prized Gutenberg Bible in its collection, the Château de Chantilly Library is part of a French estate that also includes one of France's most important art galleries, the Musée Condé. The main part of the estate (Grand Château) was built in 1528-1531, with an additional annex (Petit Château) constructed in 1560. The Grand Château was destroyed during the French Revolution and was later rebuilt from the ground up between 1875 and 1881. The library of the estate contains more than 1,300 manuscripts and 12,500 printed works, including the aforementioned Gutenberg Bible (one of more than 700 incunabula, a term describing early printed books, typically before 1501,) and roughly 200 medieval manuscripts. The library is often open to the public for guided tours.
+25. Wiblingen Monastery Library — Ulm, Germany
+The Wiblingen Monastery was founded in 1093, and remodeled in the Baroque style decades later in the 18th century. The library is a favorite among art historians for its rich ornamentation and beautiful fresco ceiling. Inscribed at the entrance to Wiblingen is ""In quo omnes thesauri sapientiae et scientiae,"" which means ""In which are stored all treasures of knowledge and science,"" a fitting quote for such an historic European institution. Library archives hold a large collection of both Pagan and Christian knowledge-related imagery, available along with its other holdings to the public through independent research and guided tours.
+26. George Peabody Library — Baltimore, Maryland, USA
+Originally intended to be a cultural center of Baltimore called the Peabody Institute Library, the George Peabody Library as it stands now is the research library of Johns Hopkins University. The library was a part of the Institute from 1878 until 1967, when it became owned by the city of Baltimore. It was eventually passed to Johns Hopkins in 1982, and is now where the university's special collections reside. Many of the collection's titles date back to the 19th century, and includes one of the world's foremost collections of Don Quixote editions. The building was described by the first Peabody provost as a ""cathedral of books,"" featuring a 61-foot-high atrium, beautiful black and white marble flooring, numerous balconies, and golden columns.
+27. Phillips Exeter Academy Library — Exeter, New Hampshire, USA
+The Phillips Exeter Academy Library is the biggest library in the world when it comes to secondary school libraries. In a way, this is one of the most impressive libraries on our list for being merely a part of a prep school, albeit one of the wealthiest prep schools in the world. Designed by architect Louis Kahn, the the structure has won numerous architectural awards, including a Twenty-five Year Award by the American Institute of Architects, which is given to only one prestigious building each year. The library was even commemorated on a U.S. Postal Service stamp in 2005 as one of 12 stamp-worthy Masterworks of Modern American Architecture.
+28. The Library of Alexandria — Alexandria, Egypt
+The Library of Alexandria was the ancient world's largest and most comprehensive library, housing books and manuscripts (on papyrus scrolls) as well as meeting rooms, gardens, and lecture halls on its grounds. Considered one of the Seven Wonders of the Ancient World, the original Library of Alexandria was tragically destroyed in a fire nearly 2,000 years ago. The new Library of Alexandria is a memorial to its predecessor. The Library cost $220 million to rebuild in 2002, and is now operating as not only a library, but also as a cultural center, planetarium, manuscript restoration lab, art gallery and exhibition space, museum, and conference center. Currently, the library contains more than 500,000 books, though it has space for over eight million.
+29. Herzog August Library — Wolfenbüttel, Germany
+Founded in 1572 by a German Duke, the Herzog August Library had become the largest library north of the Alps and one of the largest libraries in Europe by the 17th century. The library holds more than 900,000 books, more than a third of which were printed between the 15th and 18th centuries. Also called Bibliotheca Augusta, the library is internationally known for its extensive collection of books and manuscripts from the Middle Ages and early modern Europe.
+30. José Vasconcelos Library — Mexico City, Mexico
+The José Vasconcelos Library, located in Mexico City, was called one of the most advanced constructions of the 21st century by former Mexican president Vicente Fox. The library cost nearly $100 million to build, and was the largest infrastructure investment for the Fox administration, with construction plans spanning 2000-2006. The library faced some stumbling blocks during its construction that eventually led to the library being closed for 22 months from 2007 until 2008; it has since been restored and was re-opened to the public. The open, scaffold-like shelving of the library is especially unique, as are the sculptures on site, including one by artist Gabriel Orozco made from a painted whale skeleton.
+31. Rijksmuseum Library — Amsterdam, Netherlands
+The Rijksmuseum Library is part of the Dutch National Museum in Amsterdam. One of the world's foremost libraries specializing in art and art history, the Rijksmuseum holds over 350,000 auction, exhibition, trade, and collection catalogues, in addition to numerous books and periodicals. Though the items on site have been collected since 1885, the library now also features an extensive online catalog with over 140,000 monographs, 20,000 art sale catalogs, and 3,200 magazines on display. The library is open to the public; while books and magazines are not available for check-out, they can be viewed in the reading room.
+32. Stockholm Public Library — Stockholm, Sweden
+The Stockholm Public Library is one of the capital city's most notable buildings. Opened in 1928, the library was designed by Gunnar Asplund, one of the most important figures in Modernist Swedish architecture. The main interior of the building is a rotunda, giving visitors a pleasing view of many of the library's shelves along the curved rotunda walls. The Stockholm Public Library holds more than two million volumes and over 2.4 million audio visual and mixed media items.
+33. The National Library of Singapore — Singapore, Singapore
+The National Library of Singapore is now located in a 16-story building, constructed in 2005. Founded in the 1920s at the suggestion of Sir Stamford Raffles, ""the father of modern Singapore,"" the original National Library was the first of its kind in Singapore, located in the same complex as the country's first school. Today, the library is home to more than 200,000 books and a performing arts center that can accommodate more than 600 guests. The building is adorned with multiple gardens, providing picturesque views of the city of Singapore.
+34. University of Coimbra General Library — Coimbra, Portugal
+The University of Coimbra General Library has been in operation since the early 16th century in Portugal. Inventory for the library dating back to as early as 1513 shows that the library at the time already held more than 120 manuscripts. Officially established in 1537, the library today holds more than a million titles, with a separate building for historical pre-19th century books. Formally named the Biblioteca Joanina, the building's majestic Baroque architecture illustrates its 500-year history in Coimbra. The library is open daily to the public.
+35. National Library — Minsk, Belarus
+One of the best libraries in the world, and certainly one of the most distinctive and an architectural feat in its own right, the National Library of Belarus is shaped like a Rhombicuboctahedron (or this, for our fellow non-mathematicians). The unique 22-story building was opened in 2006, although the library has been in operation since 1922. The library is a tourist attraction and popular destination in Minsk, featuring a public observation deck and hosting public concerts on its lawn. As the official copyright library of Belarus, the National Library holds more than 8 million items, and houses the third largest collection of Russian works in the world.",,success
+major libraries,The 50 Best Libraries In The United States,"From classical gems to ultra-modern buildings, here are fifty reasons to apply for a library card tomorrow.",ELLE Decor,"Sep 26, 2016",https://www.elledecor.com/life-culture/travel/g3291/best-libraries-in-every-state/,article,"The 50 Best Libraries In The United States
+Have you been to the best in your state, yet? If not, you're missing out.
+From classical constructs to ultra-modern edifices, here are fifty reasons to apply for a library card stat.
+Ben May Main Library: Mobile, Alabama
+Nothing says ""library"" more than ancient Greek design elements, of which the sprawling white Ben May Main Library has plenty. The building, which opened in 1928, is also on the National Register of Historic Places, so you can browse its original wood bookshelves while experiencing a slice of Alabama history.
+Father Andrew P. Kashevaroff State Library, Archives and Museum: Juneau, Alaska
+The best thing about Father Andrew P. Kashevaroff State Library, Archives and Museum (SLAM) is that its design is inspired by the culture and landscape of Alaska. Its curved roof references a bird's protective wing, and its high windows keep visitors connected to the surrounding mountainous landscape as they're reading inside.
+Arabian Library: Scottsdale, Arizona
+Arabian Library is a modern library that takes inspiration from its landscape — the sprawling desert canyons of northern Arizona. It's not hard to get the reference with its weathered walls and narrow ""canyon courts,"" which open up to the sky.
+Hillary Rodham Clinton Children's Library and Learning Center: Little Rock, Arkansas
+The Hillary Rodham Clinton Children's Library and Learning Center was built in 2013 as a place to foster imagination and appreciate nature. But this library's not just about the books — it also has a performance space, a teaching kitchen, a greenhouse and vegetable garden, and an arboretum.
+Geisel Library at UC San Diego: La Jolla, California
+How can a trip to the library feel dull when the books are being held in a futuristic structure that almost appears to be floating? This building, named for Audrey Geisel and Theodor Seuss Geisel, or ""Dr. Seuss,"" is just as imaginative as its namesake.
+Rodolfo ""Corky"" Gonzales Branch Library: Denver, Colorado
+Denver's Rodolfo ""Corky"" Gonzales Branch Library is an inviting space that's full of light and color, and it's no accident. The variety of bright colors within and, most notably, on the building's exterior are meant to symbolize the diversity of West Denver.
+Yale University's Beinecke Rare Book and Manuscript Library: New Haven, Connecticut
+What's as awe-inducing as the number of rare books Yale University's Beinecke Library holds (about 1 million, for the record)? To be frank, what holds them: A large glass tower that stands tall at the center of this marble, granite and bronze structure.
+Hockessin Public Library: Hockessin, Delaware
+Browsing the bookshelves in a suspended glass structure, surrounded by a beautiful green park? Count us in. The Hockessin Public Library is beautifully simple and easy to navigate.
+Gulf Gate Library: Sarasota, Florida
+Built in 2015, this ultra-modern library exudes warmth and comfort through a scattering of color and a wood and brick design. On the outside, the building is meant look like the craftsman style homes that are popular in the area, so visitors feel at ease from the moment they arrive.
+Georgia State University Library: Atlanta, Georgia
+Sometimes fundamental design can be incredibly inviting in a library. Georgia State University's 300,000-square-foot library is all about clarity with abundant natural light, glass-rimmed staircases and glass-enclosed bridges that hold study spaces.
+Hawaii State Library: Honolulu, Hawaii
+This library's exterior is pure Roman elegance with 20-foot high Tuscan Columns and 18-foot arches. Inside though, the design is all Hawaiian: You'll find murals of famous Hawaiian legends and a garden courtyard with a mosaic depicting ocean currents.
+Coeur D'alene Public Library: Coeur D'alene, Idaho
+The town of Coeur D'alene is named after a neighboring lake, so it's fitting that its public library has views straight to the water. The neutral-hued library, which opens up onto a neighboring park, also won an Idaho Library of the Year Award in 2012.
+Chicago Public Library Chinatown Branch: Chicago, Illinois
+Chicago Public Library's Chinatown branch is an otherworldly structure inspired by its neighborhood. Its design is based on Feng Shui principles, and its glass exterior is meant to evoke a glowing lantern at night. The building also won a AIA/ALA Library Building Award earlier this year.
+Indianapolis Central Library: Indianapolis, Indiana
+Indianapolis's Central Library is a seamless blend of new and old. The sprawling green mall leads to a library that's both an early 20th century Greek-style building adorned in limestone and marble and a wide-open modern structure built in 2007 with a 10,000-square-foot glass atrium.
+Iowa State Law Library: Des Moines, Iowa
+The 19th-century Iowa State Law Library is the stuff of fairytales with its twisting staircases that look like delicate lacework and seemingly endless rows of bookshelves that hold more than 100,000 volumes.
+Lawrence Public Library: Lawrence, Kansas
+Lawrence Public Library blurs the lines between library and giant piece of modern art, so it's no surprise that it won a AIA/ALA Library Building Award and a Landmark Libraries Award from Library Journal. Thanks to an $18 million renovation completed in 2014, it features a sleek glass and terracotta exterior and a community reading room that wraps around the entire library.
+Wiliam T. Young Library at the University of Kentucky: Lexington, Kentucky
+This impressive 455-thousand-square-foot, six-story building holds 1.2 million volumes. As if the building itself wasn't enough, it also previously featured a 3,700-pound chandelier in its central atrium, but it fell in 2014 and hasn't been replaced since.
+East Baton Rouge Parish Main Library At Goodwood: Baton Rouge, Louisiana
+Old-fashioned libraries are a thing of the past, and hi-tech, green ones are in, as East Baton Rouge Parish Library proves. The award-winning library opened in 2014 with large stained glass windows, a rooftop terrace and garden, a plaza with water features, a recycled paper waterfall spanning three floors and a sloped roof that catches and feeds rainwater to surrounding plants.
+Portland Public Library: Portland, Maine
+Maine's largest city is full of Victorian architecture, so this bright, modern building with a glass façade truly stands out from the crowd.
+George Peabody Library at Johns Hopkins University: Baltimore, Maryland
+When it was completed 1878, the George Peabody Library was described as a ""cathedral of books,"" and it's easy to see why with its 61-foot high ceiling and an enormous skylight. Cast-iron balconies with columns with gold-leaf detailing hold five floors of books — aka 300,000 volumes.
+The Best New Hotels in Italy
+The Design Fiend’s Guide to Salone
+The Best European Countries To Move To Right Now
+ELLE Decor Checks In: Mandarin Oriental Vienna",,success

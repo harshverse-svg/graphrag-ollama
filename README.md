@@ -78,6 +78,8 @@ python scripts/run_scrape.py ^
 
 ### Build the GraphRAG project
 
+*(Note: If you skip the scraper step, the pipeline will automatically fall back to the bundled sample dataset when using the default paths below.)*
+
 ```bash
 python scripts/run_pipeline.py ^
   --input data/ai_copyright_dataset.csv ^

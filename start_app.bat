@@ -2,17 +2,19 @@
 setlocal
 cd /d "%~dp0"
 
-if not exist ".venv\Scripts\python.exe" (
+if not exist "backend\.venv\Scripts\python.exe" (
   echo Creating virtual environment...
+  cd backend
   python -m venv .venv
+  cd ..
 )
 
-if not exist ".env" (
-  copy /Y ".env.example" ".env" >nul
+if not exist "backend\.env" (
+  copy /Y "backend\.env.example" "backend\.env" >nul
 )
 
 echo Installing or refreshing dependencies...
-call ".venv\Scripts\python.exe" -m pip install -r requirements.txt
+call "backend\.venv\Scripts\python.exe" -m pip install -r backend\requirements.txt
 
 echo Launching GraphRAG Studio...
-call ".venv\Scripts\python.exe" -m streamlit run app.py
+call "backend\.venv\Scripts\python.exe" -m streamlit run frontend\app.py

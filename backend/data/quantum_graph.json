@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "QUANTUM ERROR CORRECTION",
+      "label": "QUANTUM ERROR CORRECTION",
+      "type": "CONCEPT",
+      "description": "Protocols and techniques used to minimize and correct errors in quantum systems, vital for achieving fault-tolerant quantum computing."
+    },
+    {
+      "id": "QUANTUM COMPUTING",
+      "label": "QUANTUM COMPUTING",
+      "type": "CONCEPT",
+      "description": "The field of computing that utilizes quantum mechanical phenomena, requiring specific error correction methods."
+    },
+    {
+      "id": "SURFACE CODE",
+      "label": "SURFACE CODE",
+      "type": "CONCEPT",
+      "description": "The specific and most widely pursued type of error correction protocol discussed in the introductory guide."
+    },
+    {
+      "id": "ARXIV",
+      "label": "ARXIV",
+      "type": "ORGANIZATION",
+      "description": "A platform or repository where academic papers, like the one cited, are submitted and archived."
+    },
+    {
+      "id": "ARXIVLABS",
+      "label": "ARXIVLABS",
+      "type": "ORGANIZATION",
+      "description": "A framework hosted on the arXiv website that enables collaborators to develop and share new features for the platform."
+    },
+    {
+      "id": "HUGGING FACE",
+      "label": "HUGGING FACE",
+      "type": "ORGANIZATION",
+      "description": "A platform for sharing code, data, and models, listed among resources associated with academic papers."
+    },
+    {
+      "id": "PAPERS WITH CODE",
+      "label": "PAPERS WITH CODE",
+      "type": "ORGANIZATION",
+      "description": "A resource platform that connects scientific research papers with corresponding code implementations."
+    }
+  ],
+  "links": [
+    {
+      "source": "QUANTUM ERROR CORRECTION",
+      "target": "QUANTUM COMPUTING",
+      "label": "ADVOCATES_FOR",
+      "description": "The overall content advocates for the necessity of specific error correction codes for the practical realization of quantum computing."
+    },
+    {
+      "source": "QUANTUM ERROR CORRECTION",
+      "target": "SURFACE CODE",
+      "label": "PART_OF",
+      "description": "The Surface Code is described as a specific, widely pursued example of an error correction protocol within the general field of Quantum Error Correction."
+    },
+    {
+      "source": "ARXIV",
+      "target": "ARXIVLABS",
+      "label": "PART_OF",
+      "description": "arXivLabs is explicitly stated as a framework developed directly on the arXiv website."
+    },
+    {
+      "source": "ARXIV",
+      "target": "HUGGING FACE",
+      "label": "REFERENCES",
+      "description": "Both platforms are listed together in the text as examples of associated tools and resources for academic work."
+    }
+  ],
+  "communities": 3
+}

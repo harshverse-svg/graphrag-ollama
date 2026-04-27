@@ -32,8 +32,15 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    
+    input_csv = args.input
+    if input_csv == DEFAULT_DATASET_PATH and not input_csv.exists():
+        from graphrag_ollama.app_support import get_active_dataset_path
+        input_csv = get_active_dataset_path()
+        print(f"Default dataset not found, falling back to: {input_csv}")
+
     run_pipeline(
-        input_csv=args.input,
+        input_csv=input_csv,
         graph_json_path=args.graph_json,
         graph_html_path=args.graph_html,
         template_path=args.template,

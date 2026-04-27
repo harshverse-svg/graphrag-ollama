@@ -1,0 +1,181 @@
+{
+  "nodes": [
+    {
+      "id": "NASA",
+      "label": "NASA",
+      "type": "ORGANIZATION",
+      "description": "The National Aeronautics and Space Administration, the government agency leading the Artemis mission."
+    },
+    {
+      "id": "PERSEVERANCE ROVER",
+      "label": "PERSEVERANCE ROVER",
+      "type": "AI_SYSTEM",
+      "description": "An automated exploration system designed to search for signs of ancient microbial life on Mars."
+    },
+    {
+      "id": "MARS",
+      "label": "MARS",
+      "type": "CONCEPT",
+      "description": "The red planet, the subject of the discovery, and the location of ancient life signs."
+    },
+    {
+      "id": "ROCK FORMATIONS",
+      "label": "ROCK FORMATIONS",
+      "type": "CONCEPT",
+      "description": "Geological structures discovered by the rover, suggesting past water flow."
+    },
+    {
+      "id": "MICROBIAL LIFE",
+      "label": "MICROBIAL LIFE",
+      "type": "CONCEPT",
+      "description": "Ancient life forms the finding suggests could have existed on Mars."
+    },
+    {
+      "id": "SEDIMENTARY LAYERS",
+      "label": "SEDIMENTARY LAYERS",
+      "type": "CONCEPT",
+      "description": "Geological strata that scientists analyze to reconstruct the planet's history."
+    },
+    {
+      "id": "CONCEPT",
+      "label": "CONCEPT",
+      "type": "ENTITY",
+      "description": ""
+    },
+    {
+      "id": "ARTEMIS II",
+      "label": "ARTEMIS II",
+      "type": "CONCEPT",
+      "description": "The specific crewed lunar mission scheduled to send astronauts around the Moon."
+    },
+    {
+      "id": "ORION SPACECRAFT",
+      "label": "ORION SPACECRAFT",
+      "type": "CONCEPT",
+      "description": "The spacecraft being tested during the Artemis mission, designed for lunar travel."
+    },
+    {
+      "id": "THE MOON",
+      "label": "THE MOON",
+      "type": "CONCEPT",
+      "description": "The celestial body that is the destination of the Artemis mission."
+    },
+    {
+      "id": "ARTEMIS PROGRAM",
+      "label": "ARTEMIS PROGRAM",
+      "type": "CONCEPT",
+      "description": "The overall initiative and series of missions aimed at establishing a sustainable human presence on the Moon."
+    },
+    {
+      "id": "JAMES WEBB SPACE TELESCOPE (JWST)",
+      "label": "JAMES WEBB SPACE TELESCOPE (JWST)",
+      "type": "CONCEPT",
+      "description": "A powerful astronomical instrument used to view the deep universe and capture data on cosmic formation."
+    },
+    {
+      "id": "SCIENCE DAILY",
+      "label": "SCIENCE DAILY",
+      "type": "ORGANIZATION",
+      "description": "The source publication disseminating scientific news and articles."
+    },
+    {
+      "id": "BIG BANG",
+      "label": "BIG BANG",
+      "type": "CONCEPT",
+      "description": "The theoretical beginning of the universe, marking the origin of galaxies."
+    },
+    {
+      "id": "GALAXIES",
+      "label": "GALAXIES",
+      "type": "CONCEPT",
+      "description": "Large systems of stars, gas, and dust observed by the telescope."
+    },
+    {
+      "id": "COSMIC DUST",
+      "label": "COSMIC DUST",
+      "type": "CONCEPT",
+      "description": "Interstellar material that blocks visible light, making it difficult to observe star formation."
+    },
+    {
+      "id": "STAR FORMATION",
+      "label": "STAR FORMATION",
+      "type": "CONCEPT",
+      "description": "The process by which new stars are created within nebulae."
+    },
+    {
+      "id": "EXOPLANETARY ATMOSPHERES",
+      "label": "EXOPLANETARY ATMOSPHERES",
+      "type": "CONCEPT",
+      "description": "The layers of gas surrounding planets located outside of our solar system."
+    }
+  ],
+  "links": [
+    {
+      "source": "PERSEVERANCE ROVER",
+      "target": "ROCK FORMATIONS",
+      "label": "REFERENCES",
+      "description": "The Perseverance rover discovered rock formations that suggest past river activity."
+    },
+    {
+      "source": "MARS",
+      "target": "ROCK FORMATIONS",
+      "label": "PART_OF",
+      "description": "The rock formations were found as part of the geological record on Mars."
+    },
+    {
+      "source": "ROCK FORMATIONS",
+      "target": "MICROBIAL LIFE",
+      "label": "REFERENCES",
+      "description": "The discovery of the rock formations increases the likelihood that ancient microbial life existed there."
+    },
+    {
+      "source": "SEDIMENTARY LAYERS",
+      "target": "CONCEPT",
+      "label": "REFERENCES",
+      "description": "Scientists are analyzing the sedimentary layers to gain understanding of the planet's climate history."
+    },
+    {
+      "source": "ARTEMIS II",
+      "target": "ARTEMIS PROGRAM",
+      "label": "PART_OF",
+      "description": "ARTEMIS II is the second mission segment within the larger scope of the ARTEMIS PROGRAM."
+    },
+    {
+      "source": "ARTEMIS II",
+      "target": "ORION SPACECRAFT",
+      "label": "PART_OF",
+      "description": "The mission tests and utilizes the ORION SPACECRAFT as part of its operations."
+    },
+    {
+      "source": "JAMES WEBB SPACE TELESCOPE (JWST)",
+      "target": "GALAXIES",
+      "label": "REFERENCES",
+      "description": "The James Webb Space Telescope is instrumental in revealing images and data about distant galaxies."
+    },
+    {
+      "source": "JAMES WEBB SPACE TELESCOPE (JWST)",
+      "target": "COSMIC DUST",
+      "label": "REFERENCES",
+      "description": "The telescope's infrared capabilities allow it to see through cosmic dust that obscures visible light."
+    },
+    {
+      "source": "JAMES WEBB SPACE TELESCOPE (JWST)",
+      "target": "STAR FORMATION",
+      "label": "REFERENCES",
+      "description": "The telescope provides unprecedented views and data on the processes of star formation."
+    },
+    {
+      "source": "JAMES WEBB SPACE TELESCOPE (JWST)",
+      "target": "EXOPLANETARY ATMOSPHERES",
+      "label": "REFERENCES",
+      "description": "The telescope is capable of viewing and analyzing the atmospheres of exoplanets."
+    },
+    {
+      "source": "BIG BANG",
+      "target": "GALAXIES",
+      "label": "PART_OF",
+      "description": "The article states that the observed galaxies formed just hundreds of millions of years after the Big Bang."
+    }
+  ],
+  "communities": 7
+}

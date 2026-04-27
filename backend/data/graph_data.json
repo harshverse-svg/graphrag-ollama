@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "id": "PYTHON LANGUAGE",
+      "label": "PYTHON LANGUAGE",
+      "type": "CONCEPT",
+      "description": "The foundational programming language whose syntax and semantics are described by the reference documentation."
+    },
+    {
+      "id": "PYTHON STANDARD LIBRARY",
+      "label": "PYTHON STANDARD LIBRARY",
+      "type": "CONCEPT",
+      "description": "The collection of built-in modules and standardized solutions distributed with Python, acting as a governance layer for common programming problems."
+    },
+    {
+      "id": "PYTHON PACKAGE INDEX",
+      "label": "PYTHON PACKAGE INDEX",
+      "type": "CONCEPT",
+      "description": "The centralized repository where additional components and frameworks can be found and adopted."
+    },
+    {
+      "id": "PYTHON",
+      "label": "PYTHON",
+      "type": "CONCEPT",
+      "description": "The overall ecosystem and runtime environment that hosts the library modules."
+    },
+    {
+      "id": "TYPING",
+      "label": "TYPING",
+      "type": "CONCEPT",
+      "description": "A mechanism for supporting type hints, ensuring structural consistency and predictability in code, similar to IP structure."
+    },
+    {
+      "id": "UNITTEST",
+      "label": "UNITTEST",
+      "type": "CONCEPT",
+      "description": "A dedicated framework used for verifying the correctness and reliability of code, establishing quality standards."
+    },
+    {
+      "id": "DATACLASES",
+      "label": "DATACLASES",
+      "type": "CONCEPT",
+      "description": "A specialized feature that provides structured ways to define data objects, ensuring standardized data representation."
+    },
+    {
+      "id": "GOOGLE LLC",
+      "label": "GOOGLE LLC",
+      "type": "ORGANIZATION",
+      "description": "The corporate entity that holds the copyright for the platform content."
+    },
+    {
+      "id": "YOUTUBE",
+      "label": "YOUTUBE",
+      "type": "ORGANIZATION",
+      "description": "The video sharing platform and source of the metadata."
+    },
+    {
+      "id": "ARJANCODES",
+      "label": "ARJANCODES",
+      "type": "ORGANIZATION",
+      "description": "The creator or channel name associated with the content."
+    },
+    {
+      "id": "COPYRIGHT",
+      "label": "COPYRIGHT",
+      "type": "CONCEPT",
+      "description": "The concept of legal ownership over creative works, referenced by the site."
+    },
+    {
+      "id": "PRIVACY",
+      "label": "PRIVACY",
+      "type": "CONCEPT",
+      "description": "The concept related to data protection and user information, mentioned in the site links."
+    },
+    {
+      "id": "TERMS",
+      "label": "TERMS",
+      "type": "CONCEPT",
+      "description": "The general terms and conditions governing the use of the service."
+    }
+  ],
+  "links": [
+    {
+      "source": "PYTHON LANGUAGE",
+      "target": "PYTHON STANDARD LIBRARY",
+      "label": "REFERENCES",
+      "description": "The Standard Library describes and provides access to system functionality related to the core syntax and semantics of the Python language."
+    },
+    {
+      "source": "PYTHON LANGUAGE",
+      "target": "TYPING",
+      "label": "REGULATES",
+      "description": "Typing provides a mechanism to enforce constraints and predict data types, thereby imposing structural governance over the code written in the Python language."
+    },
+    {
+      "source": "PYTHON STANDARD LIBRARY",
+      "target": "PYTHON",
+      "label": "PART_OF",
+      "description": "The Python Standard Library is an integral component that is distributed and packaged as part of the core Python language release."
+    },
+    {
+      "source": "PYTHON STANDARD LIBRARY",
+      "target": "DATACLASES",
+      "label": "REGULATES",
+      "description": "The Standard Library provides conceptual utilities and structural guidelines, including the implementation of Data Classes, to ensure predictable code standards."
+    },
+    {
+      "source": "PYTHON STANDARD LIBRARY",
+      "target": "UNITTEST",
+      "label": "ADVOCATES_FOR",
+      "description": "The UNITest framework promotes disciplined coding practices, thereby advocating for standardized testing methods within the broader Python ecosystem."
+    },
+    {
+      "source": "PYTHON PACKAGE INDEX",
+      "target": "PYTHON",
+      "label": "REFERENCES",
+      "description": "The Python ecosystem relies on the Python Package Index to provide access to hundreds of thousands of additional components and development frameworks."
+    }
+  ],
+  "communities": 9
+}

@@ -8,7 +8,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parents[1] / "backend"
 SRC_PATH = PROJECT_ROOT / "src"
 if str(SRC_PATH) not in sys.path:
     sys.path.insert(0, str(SRC_PATH))
@@ -235,12 +235,15 @@ def main() -> None:
         query_2 = st.text_input("Query 2", value="copyright generative AI")
         output_csv = st.text_input("Output CSV", value=str(PROJECT_ROOT / "data" / "ai_copyright_dataset.csv"))
         if st.button("Scrape Dataset", use_container_width=True):
-            with st.spinner("Collecting and enriching search results..."):
-                run_scrape(
-                    queries=[query_1, query_2],
-                    output_path=Path(output_csv),
-                )
-            st.success("Dataset created. You can now rebuild the graph from the Build Graph tab.")
+            try:
+                with st.spinner("Collecting and enriching search results..."):
+                    run_scrape(
+                        queries=[query_1, query_2],
+                        output_path=Path(output_csv),
+                    )
+                st.success("Dataset created. You can now rebuild the graph from the Build Graph tab.")
+            except Exception as e:
+                st.error(f"Error during scraping: {e}")
 
 
 if __name__ == "__main__":
